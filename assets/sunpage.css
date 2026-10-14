@@ -1,0 +1,16 @@
+/* Page-wide sunrise overlay (preview only). Fixed, click-through, soft screen blend; transform/opacity only. */
+.sun-page{position:fixed;inset:0;pointer-events:none;z-index:9;overflow:hidden}
+.sun-page .sp-blend{position:absolute;inset:0;mix-blend-mode:screen}
+.sun-page .sp-blend>*{position:absolute;will-change:transform,opacity}
+.sun-page>*{position:absolute;will-change:transform,opacity}
+.sp-sun{right:-70px;top:0;width:240px;height:240px;border-radius:50%;
+ background:radial-gradient(circle,#fff3cc 0 17%,#ffcf66 31%,#ff9a3ca0 48%,#ff6a2a00 70%);
+ transform:translate(0,22vh);opacity:.6}
+.sp-glow{right:-260px;top:0;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,#ffb35a55,#ff7a3000 65%);transform:translate(0,calc(22vh - 190px));opacity:.5}
+.sp-glare{right:-120px;top:0;width:420px;height:4px;border-radius:2px;background:linear-gradient(90deg,#fff0,#ffe3a080 45%,#fff6d8b0 55%,#fff0);transform:translate(0,calc(22vh + 118px)) rotate(-18deg);opacity:.35}
+.sp-dot{right:150px;top:0;width:18px;height:18px;border-radius:50%;background:radial-gradient(circle,#ffe2a0aa,#ffe2a000 70%);transform:translate(0,calc(22vh + 200px));opacity:.3}
+@media(max-width:600px){.sp-sun{right:-62px;width:170px;height:170px}.sp-glow{right:-200px;width:440px;height:440px}.sp-glare{width:260px;right:-60px}.sp-dot{right:100px}}
+.sp-core{right:18px;top:0;width:64px;height:64px;margin-top:88px;border-radius:50%;background:radial-gradient(circle,#fff6d6 0 35%,#ffd77acc 55%,#ffb14a00 72%);transform:translate(0,22vh);opacity:.85}
+@media(max-width:600px){.sun-page{z-index:11}.sp-core{right:-40px;width:80px;height:80px;margin-top:45px}.sp-sun{right:-85px!important}.sp-glow{right:-220px!important}}
+/* the hero keeps its own dawn-to-day tint; its old sun moved to this layer */
+.sunrise .sr-sun,.sunrise .sr-flare{display:none}
