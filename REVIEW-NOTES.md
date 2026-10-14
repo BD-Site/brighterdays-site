@@ -69,6 +69,11 @@ The form on private-events.html posts to Formspree. Until the placeholder is rep
 - IMG_2343 is the **Bella Vita** pizza trailer (a guest truck), captioned as such. IMG_0797 is a red food trailer; it's unclear whose it is, so the caption is generic. Skipped: IMG_2582 (portrait), IMG_0843 (not assigned), video files.
 - The story page placeholder is replaced with the brewhouse photo (IMG_1732). The walk-up window has no verified photo, so its section is text only.
 
+## Beer Playlist
+- Data lives in `data/beer-songs.json` (beer, style, abv, song, artist, spotify, youtube, confirmed). Beer names, styles and ABVs come from BD's public brewery beer list on Untappd and the current menu (Fear the Dark, Love Struck Baby). Only `confirmed: true` entries show, on taps.html (#playlist) and as a random 3-entry teaser on Home.
+- Confirmed (Spotify links checked Oct 14 via Spotify's oEmbed and page title): Raspberry Beret (Prince), Bicycle Race (Queen), Fear the Dark → Fear of the Dark (Iron Maiden), Love Struck Baby (Stevie Ray Vaughan & Double Trouble), So Fresh N' So Clean → So Fresh, So Clean (OutKast), Chickity Czech → One Week (Barenaked Ladies). No YouTube links added.
+- Unconfirmed and hidden, for Aaron to confirm or fill in: BUJU, Boatyard Blonde, Bright Lights, Brighter Days IPA, Double Trouble, Endless Love (guess: Diana Ross & Lionel Richie), Festbier, Juicy Lyrics, Livin' Is Easy (guess: "Summertime"), Marula, Midnight Marauders (guess: A Tribe Called Quest album), Oktoberfest, Power of Love (guess: Huey Lewis), Rage, Sabrosa, Stone Cold Crazy (guess: Queen), Summertime Magic (guess: Childish Gambino), The Axe-Perience, Tin Roof Rusted (guess: B-52's "Love Shack" lyric), Universal Love, Youth Energy. To publish one, set `confirmed: true` and add a link.
+
 ## Other open items
 - Map embed is the keyless Google Maps iframe. Swap it for the Maps Embed API with a key if preferred.
 - Yelp/TripAdvisor/Google listing fixes and pointing Google's website field to brighterdaysbeer.com come after launch.

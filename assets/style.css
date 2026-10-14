@@ -76,3 +76,4 @@ footer img{width:200px;height:auto}
 .story-img img{width:100%;height:100%;object-fit:cover;border-radius:12px;aspect-ratio:4/3}
 .band{margin:2rem 0;border-radius:14px;overflow:hidden;aspect-ratio:21/9}.band img{display:block;width:100%;height:100%;object-fit:cover}
 .hero .tagline{font-size:1.35rem;margin:.4rem auto .9rem}.hero .tagline strong{color:#ffd36b}
+.playlist{list-style:none;padding:0;margin:0;display:grid;gap:.5rem;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}.playlist li{background:var(--cream);border-radius:10px;padding:.6rem .8rem;border-left:4px solid var(--sun)}.pl-beer strong{display:block;font-size:1.05rem}.pl-song{margin-top:.2rem}

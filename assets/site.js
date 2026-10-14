@@ -13,3 +13,7 @@ function entryCard(x,kind){const L=x.links||{};const links=[['website','Website'
  const sub=kind==='truck'?x.cuisine:x.genre;const body=kind==='truck'?x.menu:x.bio;
  const href=L.website||L.instagram||L.facebook||L.spotify;
  return `<div class="card ecard">${img}<div><span class="pill">${kind==='truck'?'Food truck':'Performer'}</span><h3>${href?`<a href="${esc(href)}" target="_blank" rel="noopener">${esc(x.name)}</a>`:esc(x.name)}</h3>${sub?`<div class="style">${esc(sub)}</div>`:''}${body?`<p>${esc(body)}</p>`:''}${links?`<p class="small">${links}</p>`:''}</div></div>`}
+// ---- Beer Playlist (data/beer-songs.json; only confirmed:true entries are shown)
+async function renderPlaylist(el,limit){const all=await loadJSON('data/beer-songs.json');let l=all.filter(x=>x.confirmed);if(!l.length){el.closest('section')?.remove();return}
+ if(limit)l=l.sort(()=>Math.random()-.5).slice(0,limit);
+ el.innerHTML='<ol class="playlist">'+l.map(x=>{const link=x.spotify||x.youtube;return `<li><div class="pl-beer"><strong>${esc(x.beer)}</strong><span class="small">${esc(x.style)}${x.abv?' · '+esc(x.abv)+' ABV':''}</span></div><div class="pl-song">🎵 ${link?`<a href="${esc(link)}" target="_blank" rel="noopener">${esc(x.song)}</a>`:esc(x.song)} <span class="small">by ${esc(x.artist)}</span></div></li>`}).join('')+'</ol>'}
