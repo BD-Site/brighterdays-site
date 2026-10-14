@@ -131,7 +131,8 @@
     "youtube": "",
     "confirmed": false,
     "story": "",
-    "brewery": "Brighter Days Brewing Company"
+    "brewery": "Brighter Days Brewing Company",
+    "can": "assets/img/cans/double-trouble"
   },
   {
     "beer": "Endless Love",
