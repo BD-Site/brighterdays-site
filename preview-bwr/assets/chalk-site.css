@@ -45,3 +45,4 @@ label{color:var(--chalk)}
 .day,.week .day,.sched .day{background:#ffffff0d!important;color:var(--chalk)!important;border:2px dashed #ffffff3a!important}
 .day h4{color:#ff8a8a!important}
 .req{color:#ff8a8a!important}
+.s-book .btn{background:#fff!important;color:#111!important;border-color:#fff}.s-book .btn:hover{background:#111!important;color:#fff!important}
