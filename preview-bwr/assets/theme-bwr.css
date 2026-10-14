@@ -19,3 +19,11 @@ nav a{color:#111}nav a:hover,nav a.on{color:#C8102E}
 footer{background:#111;color:#fff}footer a{color:#ff6b6b}
 .gal-item{background:#eee}.req{color:#C8102E}
 form input:focus,form select:focus,form textarea:focus,.btn:focus-visible{outline-color:#C8102E}
+
+/* Typography preview: Inter (SIL OFL 1.1, self-hosted, see assets/fonts/Inter-LICENSE.txt) for headings, system stack for body. */
+@font-face{font-family:"Inter";src:url("fonts/InterVariable.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+body,button,input,select,textarea,.btn,nav a{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
+h1,h2,h3,h4,.hero .tagline strong{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-weight:700}
+h3,h4{font-weight:600}
+h1,h2{letter-spacing:-0.02em;line-height:1.15}
+h3{letter-spacing:-0.01em}
