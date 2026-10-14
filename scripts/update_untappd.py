@@ -42,5 +42,7 @@ for it in e.select(".event-item"):
     when = txt(it.select_one("p.date")); title = txt(a)
     byid[m.group(1)] = {"start": parse_start(when), "trucks": find_trucks(title), "musician": not not re.search("[\U0001F3B5\U0001F3BC\U0001F3B6\U0001F3B8\U0001F3A4]", title), "id": m.group(1), "title": title, "when": when, "url": "https://untappd.com" + a["href"]}
 evs = sorted(byid.values(), key=lambda x: x.get("start") or x["when"])
+if evs == old.get("events") and os.path.exists(path):
+    print(f"No change: {len(evs)} events (snapshot and timestamp left as-is)"); sys.exit(0)
 write("events", {"source": VENUE + "/events", "fetched": now, "events": evs}, "BD_EVENTS")
 print(f"OK: {len(evs)} events")
