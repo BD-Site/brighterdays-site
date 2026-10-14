@@ -60,4 +60,6 @@
 .hbub i:nth-child(7){animation-duration:6.8s!important;animation-delay:-1.8s!important}
 .hbub i:nth-child(8){animation-duration:5.5s!important;animation-delay:-3s!important}
 @keyframes hbl{0%{transform:translate3d(0,0,0) scale(.7);opacity:0}10%{opacity:.9}50%{transform:translate3d(10px,-300px,0) scale(1)}90%{opacity:.75}100%{transform:translate3d(-8px,-620px,0) scale(1.15);opacity:0}}
+.hbub i{border-width:2.5px!important;box-shadow:0 0 0 1.5px #000a,inset 0 0 0 1px #0007,0 0 8px #fff8!important;background:radial-gradient(circle at 32% 30%,#ffffffcc 0 12%,#ffffff22 14%)!important}
+.hbub i:nth-child(odd){width:30px!important;height:30px!important}.hbub i:nth-child(even){width:22px!important;height:22px!important}.hbub i:nth-child(4n){width:36px!important;height:36px!important}
 @media (prefers-reduced-motion:reduce){.hbub{display:none!important}}
