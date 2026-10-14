@@ -8,7 +8,8 @@
     "spotify": "https://open.spotify.com/track/5FYslb39kAXnPmxSsJyzC5",
     "youtube": "",
     "confirmed": true,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Chickity Czech",
@@ -19,7 +20,8 @@
     "spotify": "https://open.spotify.com/track/1C0pmryC2MdXfa7MZ9uIrU",
     "youtube": "",
     "confirmed": true,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Fear the Dark",
@@ -30,7 +32,8 @@
     "spotify": "https://open.spotify.com/track/2NHwyehGpS7kMswGIBcDP3",
     "youtube": "",
     "confirmed": true,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Love Struck Baby",
@@ -41,7 +44,8 @@
     "spotify": "https://open.spotify.com/track/5sDgRj9V907yyRR4mOYOeE",
     "youtube": "",
     "confirmed": true,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Raspberry Beret",
@@ -52,7 +56,9 @@
     "spotify": "https://open.spotify.com/track/5jSz894ljfWE0IcHBSM39i",
     "youtube": "",
     "confirmed": true,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company",
+    "can": "assets/img/cans/raspberry-beret"
   },
   {
     "beer": "So Fresh N' So Clean",
@@ -63,7 +69,8 @@
     "spotify": "https://open.spotify.com/track/0UJQpwj5THX0fv0FdB0tDm",
     "youtube": "",
     "confirmed": true,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "BUJU",
@@ -74,7 +81,8 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Boatyard Blonde",
@@ -85,7 +93,8 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Bright Lights",
@@ -96,7 +105,8 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Brighter Days IPA",
@@ -107,7 +117,8 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Double Trouble",
@@ -118,7 +129,8 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Endless Love",
@@ -129,7 +141,8 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Festbier",
@@ -140,7 +153,8 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Juicy Lyrics",
@@ -151,7 +165,8 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Livin' Is Easy",
@@ -162,7 +177,8 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Marula",
@@ -173,7 +189,8 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Midnight Marauders",
@@ -184,7 +201,8 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Oktoberfest",
@@ -195,7 +213,8 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Power of Love",
@@ -206,7 +225,8 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Rage",
@@ -217,7 +237,8 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Sabrosa",
@@ -228,7 +249,8 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Stone Cold Crazy",
@@ -239,7 +261,8 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Summertime Magic",
@@ -250,7 +273,8 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "The Axe-Perience",
@@ -261,7 +285,8 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Tin Roof Rusted",
@@ -272,7 +297,8 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Universal Love",
@@ -283,7 +309,8 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   },
   {
     "beer": "Youth Energy",
@@ -294,6 +321,7 @@
     "spotify": "",
     "youtube": "",
     "confirmed": false,
-    "story": ""
+    "story": "",
+    "brewery": "Brighter Days Brewing Company"
   }
 ]
