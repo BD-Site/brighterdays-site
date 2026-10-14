@@ -65,9 +65,9 @@
 @media (prefers-reduced-motion:reduce){.hbub{display:none!important}}
 
 /* Hero fizz: tiny carbonation streams (preview only). */
-.fizz{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
-.fizz i{position:absolute;bottom:-10px;border-radius:50%;background:#fffde8d9;opacity:0;will-change:transform,opacity;animation:fz 5s linear infinite}
-.fizz i:nth-child(3n){background:#f8e3a0d9}
-@keyframes fz{0%{transform:translate(0,0);opacity:0}8%{opacity:.9}25%{transform:translate(3px,-25vh)}50%{transform:translate(-3px,-50vh)}70%{opacity:.75}75%{transform:translate(3px,-75vh)}100%{transform:translate(0,-100vh);opacity:0}}
-@media (max-width:700px){.fizz i:nth-child(n+25){display:none}}
+.fizz{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1;--fh:-440px}
+.fizz i{position:absolute;bottom:-8px;border-radius:50%;background:#fffef2;box-shadow:0 0 0 .5px #0003;opacity:0;will-change:transform,opacity;animation:fz 5s linear infinite}
+.fizz i:nth-child(3n){background:#fbe7a6}
+@keyframes fz{0%{transform:translate(0,0);opacity:0}6%{opacity:.95}25%{transform:translate(3px,calc(var(--fh)*.25))}50%{transform:translate(-3px,calc(var(--fh)*.5))}70%{opacity:.85}75%{transform:translate(3px,calc(var(--fh)*.75))}100%{transform:translate(0,var(--fh));opacity:0}}
+@media (max-width:700px){.fizz{--fh:-620px}.fizz i:nth-child(n+25){display:none}}
 @media (prefers-reduced-motion:reduce){.fizz{display:none!important}}
