@@ -53,3 +53,14 @@ iframe,img,video{max-width:100%}#menu-container{max-width:100%;overflow-x:auto}
 .hero.photo .hero-inner{position:relative;padding:7rem 1rem 4.5rem;background:linear-gradient(180deg,#0000 0,#0004 35%,#3b2a1ecc 100%)}
 @media(max-width:600px){.hero.photo .hero-inner{padding:5rem 1rem 3rem}}
 .hero.photo .hero-inner{background:linear-gradient(180deg,#0003 0,#00000080 45%,#3b2a1ee6 100%)}.hero.photo p{text-shadow:0 1px 6px #000c;font-weight:600}
+/* ---- no-distortion rules (site-wide) ---- */
+img{max-width:100%;height:auto}
+.logo img,.logo-full,.logo-mark,footer img{height:auto;object-fit:contain}
+.logo-full{height:76px;width:auto}.logo-mark{height:44px;width:auto}
+.hero.photo{position:relative;display:flex;align-items:flex-end;min-height:420px;height:60vh;height:60svh;max-height:640px;background:#3b2a1e;padding:0;overflow:hidden}
+.hero.photo picture{position:absolute;inset:0;display:block}
+.hero.photo img.hero-img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center 45%}
+.hero.photo .hero-inner{position:relative;width:100%}
+@media(max-width:600px){.hero.photo{min-height:0;height:68vh;height:68svh;max-height:none}}
+.logo .logo-full{height:76px;width:auto}.logo .logo-mark{width:44px;height:44px}
+footer img{width:200px;height:auto}
