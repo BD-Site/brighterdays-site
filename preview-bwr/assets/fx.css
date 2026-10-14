@@ -46,3 +46,18 @@
 @keyframes dev{from{opacity:1}to{opacity:0}}
 .pola.tilt{transform:rotate(-2.5deg)}
 @media (prefers-reduced-motion:reduce){[class*="fx-"] *,[class*="fx-"] *::after{animation:none!important}.hbub{display:none!important}}
+
+/* Hero bubbles v2: continuous loop, mixed with the floating notes (preview only). */
+.fx-hero .hbub{display:block!important}
+.hbub i{border:2px solid #fff!important;background:#ffffff14!important;box-shadow:0 0 0 1px #0008,inset 0 0 0 1px #0006,0 0 6px #fff6!important;opacity:0;animation:hbl 6s linear infinite!important}
+.hbub i:nth-child(3n){border-color:#f6c445!important;box-shadow:0 0 0 1px #0008,0 0 6px #f6c44588!important}
+.hbub i:nth-child(1){animation-duration:6.5s!important;animation-delay:-1s!important}
+.hbub i:nth-child(2){animation-duration:5.2s!important;animation-delay:-3.4s!important}
+.hbub i:nth-child(3){animation-duration:7s!important;animation-delay:-5s!important}
+.hbub i:nth-child(4){animation-duration:5.8s!important;animation-delay:-.4s!important}
+.hbub i:nth-child(5){animation-duration:6.2s!important;animation-delay:-2.6s!important}
+.hbub i:nth-child(6){animation-duration:5s!important;animation-delay:-4.1s!important}
+.hbub i:nth-child(7){animation-duration:6.8s!important;animation-delay:-1.8s!important}
+.hbub i:nth-child(8){animation-duration:5.5s!important;animation-delay:-3s!important}
+@keyframes hbl{0%{transform:translate3d(0,0,0) scale(.7);opacity:0}10%{opacity:.9}50%{transform:translate3d(10px,-300px,0) scale(1)}90%{opacity:.75}100%{transform:translate3d(-8px,-620px,0) scale(1.15);opacity:0}}
+@media (prefers-reduced-motion:reduce){.hbub{display:none!important}}
