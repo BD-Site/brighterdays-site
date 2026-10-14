@@ -75,3 +75,4 @@ footer img{width:200px;height:auto}
 .lb-x{top:12px;right:12px}.lb-p{left:10px;top:50%;transform:translateY(-50%)}.lb-n{right:10px;top:50%;transform:translateY(-50%)}
 .story-img img{width:100%;height:100%;object-fit:cover;border-radius:12px;aspect-ratio:4/3}
 .band{margin:2rem 0;border-radius:14px;overflow:hidden;aspect-ratio:21/9}.band img{display:block;width:100%;height:100%;object-fit:cover}
+.hero .tagline{font-size:1.35rem;margin:.4rem auto .9rem}.hero .tagline strong{color:#ffd36b}
