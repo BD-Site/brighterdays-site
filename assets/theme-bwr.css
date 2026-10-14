@@ -27,3 +27,6 @@ h1,h2,h3,h4,.hero .tagline strong{font-family:"Inter",-apple-system,BlinkMacSyst
 h3,h4{font-weight:600}
 h1,h2{letter-spacing:-0.02em;line-height:1.15}
 h3{letter-spacing:-0.01em}
+
+/* Mobile hero: let the hero grow with its text and keep breathing room above the heading. */
+@media(max-width:600px){.hero.photo{height:auto;min-height:68vh;min-height:68svh}.hero.photo .hero-inner{padding-top:4.5rem}}
