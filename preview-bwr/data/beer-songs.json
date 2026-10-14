@@ -1,0 +1,272 @@
+[
+  {
+    "beer": "Bicycle Race",
+    "style": "Pale Ale - American",
+    "abv": "4.6%",
+    "song": "Bicycle Race",
+    "artist": "Queen",
+    "spotify": "https://open.spotify.com/track/5FYslb39kAXnPmxSsJyzC5",
+    "youtube": "",
+    "confirmed": true
+  },
+  {
+    "beer": "Chickity Czech",
+    "style": "Pilsner - Czech / Bohemian",
+    "abv": "4.6%",
+    "song": "One Week",
+    "artist": "Barenaked Ladies",
+    "spotify": "https://open.spotify.com/track/1C0pmryC2MdXfa7MZ9uIrU",
+    "youtube": "",
+    "confirmed": true
+  },
+  {
+    "beer": "Fear the Dark",
+    "style": "Lager - Tmavé (Czech Dark)",
+    "abv": "6.3%",
+    "song": "Fear of the Dark",
+    "artist": "Iron Maiden",
+    "spotify": "https://open.spotify.com/track/2NHwyehGpS7kMswGIBcDP3",
+    "youtube": "",
+    "confirmed": true
+  },
+  {
+    "beer": "Love Struck Baby",
+    "style": "Pale Ale - New England / Hazy",
+    "abv": "5.7%",
+    "song": "Love Struck Baby",
+    "artist": "Stevie Ray Vaughan & Double Trouble",
+    "spotify": "https://open.spotify.com/track/5sDgRj9V907yyRR4mOYOeE",
+    "youtube": "",
+    "confirmed": true
+  },
+  {
+    "beer": "Raspberry Beret",
+    "style": "Sour - Fruited Berliner Weisse",
+    "abv": "4.2%",
+    "song": "Raspberry Beret",
+    "artist": "Prince",
+    "spotify": "https://open.spotify.com/track/5jSz894ljfWE0IcHBSM39i",
+    "youtube": "",
+    "confirmed": true
+  },
+  {
+    "beer": "So Fresh N' So Clean",
+    "style": "Sour - Berliner Weisse",
+    "abv": "4.4%",
+    "song": "So Fresh, So Clean",
+    "artist": "OutKast",
+    "spotify": "https://open.spotify.com/track/0UJQpwj5THX0fv0FdB0tDm",
+    "youtube": "",
+    "confirmed": true
+  },
+  {
+    "beer": "BUJU",
+    "style": "IPA - New England / Hazy",
+    "abv": "6.8%",
+    "song": "",
+    "artist": "",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  },
+  {
+    "beer": "Boatyard Blonde",
+    "style": "Blonde / Golden Ale - Other",
+    "abv": "N/A",
+    "song": "",
+    "artist": "",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  },
+  {
+    "beer": "Bright Lights",
+    "style": "Lager - American Light",
+    "abv": "4.8%",
+    "song": "",
+    "artist": "",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  },
+  {
+    "beer": "Brighter Days IPA",
+    "style": "IPA - American",
+    "abv": "6.5%",
+    "song": "",
+    "artist": "",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  },
+  {
+    "beer": "Double Trouble",
+    "style": "IPA - Imperial / Double",
+    "abv": "8.6%",
+    "song": "",
+    "artist": "",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  },
+  {
+    "beer": "Endless Love",
+    "style": "Pale Ale - New England / Hazy",
+    "abv": "5%",
+    "song": "Endless Love",
+    "artist": "Diana Ross & Lionel Richie",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  },
+  {
+    "beer": "Festbier",
+    "style": "Festbier",
+    "abv": "5.7%",
+    "song": "",
+    "artist": "",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  },
+  {
+    "beer": "Juicy Lyrics",
+    "style": "IPA - New England / Hazy",
+    "abv": "7%",
+    "song": "",
+    "artist": "",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  },
+  {
+    "beer": "Livin' Is Easy",
+    "style": "Blonde / Golden Ale - Other",
+    "abv": "6%",
+    "song": "Summertime (lyric \"livin' is easy\")",
+    "artist": "Gershwin standard; many artists",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  },
+  {
+    "beer": "Marula",
+    "style": "IPA - Imperial / Double",
+    "abv": "8.8%",
+    "song": "",
+    "artist": "",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  },
+  {
+    "beer": "Midnight Marauders",
+    "style": "Stout - Imperial / Double Pastry",
+    "abv": "10%",
+    "song": "Midnight Marauders (album)",
+    "artist": "A Tribe Called Quest",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  },
+  {
+    "beer": "Oktoberfest",
+    "style": "Märzen",
+    "abv": "5.5%",
+    "song": "",
+    "artist": "",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  },
+  {
+    "beer": "Power of Love",
+    "style": "IPA - New England / Hazy",
+    "abv": "5.9%",
+    "song": "The Power of Love",
+    "artist": "Huey Lewis and the News",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  },
+  {
+    "beer": "Rage",
+    "style": "Stout - Russian Imperial",
+    "abv": "11%",
+    "song": "",
+    "artist": "",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  },
+  {
+    "beer": "Sabrosa",
+    "style": "IPA - American",
+    "abv": "6.5%",
+    "song": "",
+    "artist": "",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  },
+  {
+    "beer": "Stone Cold Crazy",
+    "style": "IPA - Cold",
+    "abv": "7%",
+    "song": "Stone Cold Crazy",
+    "artist": "Queen",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  },
+  {
+    "beer": "Summertime Magic",
+    "style": "Sour - Fruited",
+    "abv": "5%",
+    "song": "Summertime Magic",
+    "artist": "Childish Gambino",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  },
+  {
+    "beer": "The Axe-Perience",
+    "style": "Blonde / Golden Ale - Other",
+    "abv": "5.3%",
+    "song": "",
+    "artist": "",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  },
+  {
+    "beer": "Tin Roof Rusted",
+    "style": "Lager - Amber / Red",
+    "abv": "5.1%",
+    "song": "Love Shack (lyric \"tin roof, rusted\")",
+    "artist": "The B-52's",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  },
+  {
+    "beer": "Universal Love",
+    "style": "Pale Ale - New England / Hazy",
+    "abv": "5%",
+    "song": "",
+    "artist": "",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  },
+  {
+    "beer": "Youth Energy",
+    "style": "Stout - Coffee",
+    "abv": "6%",
+    "song": "",
+    "artist": "",
+    "spotify": "",
+    "youtube": "",
+    "confirmed": false
+  }
+]
