@@ -17,3 +17,10 @@
 .cans-photos picture{display:block;height:100%}
 @media(max-width:700px){.cans-photos{grid-template-columns:1fr}.cans-photos img{height:auto}}
 .pl-feature{margin:0 auto 1.25rem;max-width:1100px}.pl-feature img{display:block;width:100%;aspect-ratio:16/7;object-fit:cover;object-position:50% 45%;border-radius:12px}@media(max-width:700px){.pl-feature img{aspect-ratio:4/3}}
+.pl-feats{display:grid;grid-template-columns:2fr 1fr;gap:1rem;max-width:1100px;margin:0 auto 1.25rem}.pl-feats .pl-feature{margin:0;max-width:none}.pl-feats .pl-feature img{aspect-ratio:auto;height:100%;max-height:420px}
+@media(max-width:700px){.pl-feats{grid-template-columns:1fr}.pl-feats .pl-feature img{max-height:none;aspect-ratio:4/3}}
+.cans-main{margin:1rem 0 0}.cans-main img{width:100%;height:auto;display:block;border-radius:12px}
+.cans-row{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin-top:.75rem}.cans-row figure{margin:0}.cans-row img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px;display:block}
+@media(max-width:700px){.cans-row{grid-template-columns:repeat(2,1fr)}}
+.trail-photo{margin:0 0 1rem}.trail-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 60%;border-radius:12px;display:block}
+.story-img2{display:block;margin-top:1rem}
