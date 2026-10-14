@@ -60,8 +60,14 @@ The form on private-events.html posts to Formspree. Until the placeholder is rep
 - Untappd for Business embed terms were not checked. If UfB requires attribution or links, remove those two CSS rules.
 
 ## Home hero photo
-- `assets/img/home-hero.webp` (~247 KB) and `.jpg` fallback (~282 KB), 1440×810. Cropped from Aaron's Facebook photo `123_outdoor-palms.jpg`: taproom exterior, palms, Brighter Days banner, no faces. The source is only 1440px, so it wasn't upscaled to 1920.
-- Note: several facebook-photos filenames don't match their contents (e.g. 049 is a Steve D's promo graphic, 120 is a person posing at the 5K start).
+- Now `IMG_1217` (Aaron's iCloud): the red taproom building, garage doors and palms. Cropped 16:9 to 1920×1080: `assets/img/home-hero.webp` (~260 KB) / `.jpg` (~389 KB). Chosen over the previous 123_outdoor-palms and IMG_2579 (IMG_2579 is a wedding on the deck at night with identifiable guests, and dark under text).
+- A secondary band on Home uses `IMG_1222` (rainbow over the building), cropped 21:9: `assets/img/home-rainbow.*`.
+- Hero sizing: object-fit: cover; height 60svh on desktop (max 640px) and 68svh on mobile, with a vh fallback; no background-attachment: fixed. Site-wide `img{max-width:100%;height:auto}`. Gallery thumbnails use fixed 4:3 boxes with object-fit: cover. The logo keeps its aspect ratio. CSS/JS URLs are cache-busted (`?v=`).
+
+## Spaces gallery
+- Photos come from Aaron's iCloud album; beer and can shots come from Facebook (011, 083, 128, 074, checked visually; 028 and 042 skipped because of meme text, 077 and 078 because they aren't beer shots). Each has 1600px webp+jpg and a 600px 4:3 thumbnail, EXIF rotation applied, all EXIF/GPS stripped. Lazy loading, alt text, and a small lightbox (keyboard, swipe, and it works as plain links without JS).
+- IMG_2343 is the **Bella Vita** pizza trailer (a guest truck), captioned as such. IMG_0797 is a red food trailer; it's unclear whose it is, so the caption is generic. Skipped: IMG_2582 (portrait), IMG_0843 (not assigned), video files.
+- The story page placeholder is replaced with the brewhouse photo (IMG_1732). The walk-up window has no verified photo, so its section is text only.
 
 ## Other open items
 - Map embed is the keyless Google Maps iframe. Swap it for the Maps Embed API with a key if preferred.
