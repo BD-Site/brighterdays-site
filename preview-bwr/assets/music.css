@@ -1,0 +1,37 @@
+/* Music theme (preview only). Animates transform/opacity only. */
+:root{--mred:#C8102E;--mink:#111}
+/* 1) floating notes in the home hero */
+.hero.photo .notes{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+.hero.photo .hero-inner{z-index:2}
+.notes svg{position:absolute;bottom:-40px;width:28px;height:28px;fill:#fff;opacity:0;animation:noteUp 9s linear infinite}
+.notes svg:nth-child(1){left:8%;animation-delay:0s}
+.notes svg:nth-child(2){left:22%;width:20px;animation-delay:2.2s;fill:#ff6b6b}
+.notes svg:nth-child(3){left:40%;animation-delay:4.5s;width:22px}
+.notes svg:nth-child(4){left:62%;animation-delay:1.2s;fill:#ff6b6b}
+.notes svg:nth-child(5){left:78%;width:24px;animation-delay:3.4s}
+.notes svg:nth-child(6){left:91%;width:18px;animation-delay:6s}
+@keyframes noteUp{0%{transform:translate3d(0,0,0) rotate(-8deg);opacity:0}15%{opacity:.55}50%{transform:translate3d(14px,-260px,0) rotate(8deg)}85%{opacity:.4}100%{transform:translate3d(-10px,-560px,0) rotate(-6deg);opacity:0}}
+/* 2) vinyl spin on Beer Playlist song cards */
+.playlist li{position:relative;overflow:hidden;padding-right:4.2rem}
+.playlist li::after{content:"";z-index:0;position:absolute;right:-22px;top:50%;width:76px;height:76px;margin-top:-38px;border-radius:50%;
+background:conic-gradient(from 20deg,#fff0 0 6%,#ffffff80 9%,#fff0 13% 50%,#ffffff60 54%,#fff0 58%),radial-gradient(circle,var(--mred) 0 9px,#fff 9px 11px,var(--mred) 11px 16px,#111 16px 17px,#222 17px 22px,#111 22px 23px,#222 23px 28px,#111 28px 29px,#1a1a1a 29px);
+transform:rotate(0deg);transition:transform .9s cubic-bezier(.2,.7,.3,1);opacity:.92}
+.playlist li:hover::after,.playlist li:focus-within::after,.playlist li.spin::after{transform:rotate(540deg)}
+/* 3) line-art dividers */
+.mdiv{height:56px;margin:2.2rem auto 1rem;max-width:100%;background:no-repeat center/auto 100%}
+.mdiv svg{display:block;margin:0 auto;height:56px;width:auto;max-width:100%}
+/* 4) scroll reveal (only when JS adds .mreveal) */
+.mreveal .rv{opacity:0;transform:translate3d(0,24px,0);transition:opacity .7s ease,transform .7s ease}
+.mreveal .rv.rv-l{transform:translate3d(-28px,0,0)}
+.mreveal .rv.in{opacity:1;transform:none}
+/* 5) equalizer */
+.eq{display:inline-flex;align-items:flex-end;gap:3px;height:18px;margin-left:.5rem;vertical-align:-2px}
+.eq i{display:block;width:4px;height:18px;background:var(--mred);transform-origin:bottom;animation:eq 1s ease-in-out infinite}
+.eq i:nth-child(2){background:#111;animation-delay:.2s;animation-duration:.8s}
+.eq i:nth-child(3){animation-delay:.4s;animation-duration:1.15s}
+.eq i:nth-child(4){background:#111;animation-delay:.1s;animation-duration:.9s}
+@keyframes eq{0%,100%{transform:scaleY(.25)}50%{transform:scaleY(1)}}
+@media (prefers-reduced-motion:reduce){
+.notes{display:none}.eq i{animation:none;transform:scaleY(.6)}
+.playlist li::after{transition:none}.playlist li:hover::after,.playlist li.spin::after{transform:none}
+.mreveal .rv{opacity:1;transform:none;transition:none}}
