@@ -1,6 +1,6 @@
 {
   "source": "https://untappd.com/v/brighter-days-brewing-company/10061420/events",
-  "fetched": "2026-10-14T03:40+00:00",
+  "fetched": "2026-10-14T16:01+00:00",
   "events": [
     {
       "start": "2026-10-14T18:00",
@@ -30,6 +30,24 @@
       "title": "🎼 Adam Christel",
       "when": "Fri, Oct 16th • 6:30 PM EDT - Fri, Oct 16th • 8:30 PM EDT",
       "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1005523"
+    },
+    {
+      "start": "2026-10-18T12:00",
+      "trucks": [],
+      "musician": false,
+      "id": "1007173",
+      "title": "🚲 BD Bikes and Brews",
+      "when": "Sun, Oct 18th • 12:00 PM EDT - Sun, Oct 18th • 1:00 PM EDT",
+      "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1007173"
+    },
+    {
+      "start": "2026-10-18T13:00",
+      "trucks": [],
+      "musician": false,
+      "id": "1007174",
+      "title": "🏈 Steelers v. Bucs",
+      "when": "Sun, Oct 18th • 1:00 PM EDT - Sun, Oct 18th • 3:30 PM EDT",
+      "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1007174"
     }
   ]
 }
