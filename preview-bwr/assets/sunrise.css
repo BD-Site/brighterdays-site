@@ -3,10 +3,8 @@
 .sunrise>*{position:absolute;will-change:transform,opacity}
 .sr-dawn{inset:0;background:linear-gradient(180deg,#5a0d18 0%,#b3261e 38%,#f07a2a 72%,#ffc46b 100%);opacity:.42}
 .sr-day{inset:0;background:linear-gradient(180deg,#ffffff00 0%,#fff3d000 50%,#ffe9a840 100%);opacity:.35}
-.sr-sun{left:85%;top:100%;width:220px;height:220px;margin:-110px 0 0 -110px;border-radius:50%;
- background:radial-gradient(circle,#ffe7a8 0 16%,#ffc35a 30%,#ff9a3c66 48%,#ff6a2a00 70%);transform:translateY(-120px);opacity:.85}
-.sr-flare{left:85%;top:100%;width:520px;height:6px;margin:-3px 0 0 -260px;border-radius:3px;
- background:linear-gradient(90deg,#fff0 0,#ffe8b080 40%,#fffbe6cc 50%,#ffe8b080 60%,#fff0 100%);transform:translateY(-55%) rotate(-12deg);opacity:.35}
-.sr-flare.f2{width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:radial-gradient(circle,#ffe7a8aa,#ffe7a800 70%);transform:translate(-120px,-40%);opacity:.3}
-.sr-flare.f3{width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;background:radial-gradient(circle,#ffb46b66,#ffb46b00 70%);transform:translate(-220px,-20%);opacity:.25}
-@media(max-width:600px){.sr-sun{left:74%;width:230px;height:230px;margin:-115px 0 0 -115px}.sr-flare{left:76%;width:340px;margin-left:-170px}}
+
+
+
+
+@media(max-width:600px){}
