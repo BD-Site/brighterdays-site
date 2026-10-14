@@ -3,7 +3,7 @@
 /* 1) floating notes in the home hero */
 .hero.photo .notes{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1}
 .hero.photo .hero-inner{z-index:2}
-.notes svg{position:absolute;bottom:-50px;width:40px;height:40px;fill:#fff;stroke:#0006;stroke-width:.6;opacity:0;animation:noteUp 9s linear infinite}
+.notes svg{position:absolute;bottom:-50px;width:40px;height:40px;fill:#fff;stroke:#00000080;stroke-width:1.2;paint-order:stroke;filter:drop-shadow(0 1px 2px #00000080);opacity:0;animation:noteUp 9s linear infinite}
 .notes svg:nth-child(1){left:8%;animation-delay:0s}
 .notes svg:nth-child(2){left:22%;width:30px;animation-delay:2.2s;fill:#ff6b6b}
 .notes svg:nth-child(3){left:40%;animation-delay:4.5s;width:34px}
