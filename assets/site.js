@@ -7,7 +7,7 @@ function renderEvents(el,limit){let ev=upcoming();if(limit)ev=ev.slice(0,limit);
 const norm=s=>String(s||'').toLowerCase().replace(/[‘’`]/g,"'").replace(/[^a-z0-9' ]/g,' ').replace(/\s+/g,' ').trim();
 function titleParts(t){return String(t).replace(/^\s*live music\s*[-–:]\s*/i,'').split(/\s(?:&|\+|and|w\/|with)\s/i).map(p=>p.replace(/[^\p{L}\p{N}\s'‘’.&-]/gu,'').trim()).filter(Boolean)}
 function findEntry(part,list){const n=norm(part);return list.find(x=>[x.name,...(x.aliases||[])].some(a=>norm(a)===n))||list.find(x=>[x.name,...(x.aliases||[])].some(a=>{const k=norm(a);return k.length>3&&(n.includes(k))}))}
-async function loadJSON(u){try{const r=await fetch(u);return r.ok?await r.json():[]}catch(_){return[]}}
+async function loadJSON(u){try{const r=await fetch(u,{cache:"no-cache"});return r.ok?await r.json():[]}catch(_){return[]}}
 function entryCard(x,kind){const L=x.links||{};const links=[['website','Website'],['instagram','Instagram'],['facebook','Facebook'],['spotify','Spotify']].filter(([k])=>L[k]).map(([k,l])=>`<a href="${esc(L[k])}" target="_blank" rel="noopener">${l}</a>`).join(' · ');
  const img=x.photo?`<img src="${esc(x.photo)}" alt="${esc(x.name)}" class="ecard-img">`:`<div class="ecard-img ph-img" aria-hidden="true">${kind==='truck'?'🚚':'🎵'}</div>`;
  const sub=kind==='truck'?x.cuisine:x.genre;const body=kind==='truck'?x.menu:x.bio;

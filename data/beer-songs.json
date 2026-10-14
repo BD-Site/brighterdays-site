@@ -9,7 +9,8 @@
     "youtube": "",
     "confirmed": true,
     "story": "",
-    "brewery": "Brighter Days Brewing Company"
+    "brewery": "Brighter Days Brewing Company",
+    "can": "assets/img/cans/bicycle-race"
   },
   {
     "beer": "Chickity Czech",
