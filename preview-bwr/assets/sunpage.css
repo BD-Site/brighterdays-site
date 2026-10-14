@@ -9,7 +9,7 @@
 .sp-glare{width:520px;height:4px;margin:-2px 0 0 -260px;border-radius:2px;background:linear-gradient(90deg,#fff0,#ffe3a080 45%,#fff6d8b0 55%,#fff0);opacity:.3;transform:translate(80vw,30vh) rotate(-18deg)}
 .sp-dot{width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:radial-gradient(circle,#ffe2a0aa,#ffe2a000 70%);opacity:.3;transform:translate(70vw,40vh)}
 .sp-core{width:70px;height:70px;margin:-35px 0 0 -35px;border-radius:50%;background:radial-gradient(circle,#fff6d6 0 35%,#ffd77acc 55%,#ffb14a00 72%);opacity:.9;transform:translate(96vw,30vh)}
-@media(max-width:600px){.sp-glow{width:440px;height:440px;margin:-220px 0 0 -220px}.sp-sun{width:170px;height:170px;margin:-85px 0 0 -85px}.sp-rays{width:360px;height:360px;margin:-180px 0 0 -180px}.sp-glare{width:300px;margin-left:-150px}.sp-core{width:64px;height:64px;margin:-32px 0 0 -32px}}
+@media(max-width:600px){.sp-glow{width:440px;height:440px;margin:-220px 0 0 -220px}.sp-sun{width:170px;height:170px;margin:-85px 0 0 -85px}.sp-rays{width:360px;height:360px;margin:-180px 0 0 -180px}.sp-glare{width:300px;margin-left:-150px}.sp-core{width:76px;height:76px;margin:-38px 0 0 -38px}}
 .sunrise .sr-sun,.sunrise .sr-flare{display:none}
 /* trail-section links sit on a photo; a lighter pink keeps AA while the sun passes */
 .s-trail .in a:not(.btn){color:#ffb8b8}
