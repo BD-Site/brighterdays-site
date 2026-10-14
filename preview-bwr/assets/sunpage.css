@@ -1,18 +1,14 @@
-/* Swooping page-wide sun (preview only). Fixed, click-through, under the sticky header (z 9 < 10). Transform/opacity only. */
+/* Page-wide sun v9: one solid glowing sun. Fixed, click-through overlay. Transform/opacity only. */
 .sun-page{position:fixed;inset:0;pointer-events:none;z-index:19;overflow:hidden}
-.sun-page .sp-blend{position:absolute;inset:0;mix-blend-mode:screen}
-.sun-page .sp-blend>*,.sun-page>.sp-core,.sun-page>.sp-rim{width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;border:4px solid #c2410c;box-shadow:0 0 0 1px #ffb34755,inset 0 0 0 1px #ffb34755;opacity:.7;transform:translate3d(96vw,30vh,0)}
-.sp-glow{width:640px;height:640px;margin:-320px 0 0 -320px;border-radius:50%;background:radial-gradient(circle,#ffb35a55,#ff7a3000 65%);opacity:.5;transform:translate3d(80vw,30vh,0)}
-.sp-sun{width:240px;height:240px;margin:-120px 0 0 -120px;border-radius:50%;background:radial-gradient(circle,#fff3cc 0 17%,#ffcf66 31%,#ff9a3ca0 48%,#ff6a2a00 70%);opacity:.75;transform:translate3d(80vw,30vh,0)}
-.sp-rays{width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;opacity:.3;transform:translate3d(80vw,30vh,0);
- background:repeating-conic-gradient(from 0deg,#ffe3a033 0 4deg,#ffe3a000 4deg 22deg);-webkit-mask:radial-gradient(circle,#000 22%,#0000 68%);mask:radial-gradient(circle,#000 22%,#0000 68%)}
-.sp-glare{width:520px;height:4px;margin:-2px 0 0 -260px;border-radius:2px;background:linear-gradient(90deg,#fff0,#ffe3a080 45%,#fff6d8b0 55%,#fff0);opacity:.3;transform:translate3d(80vw,30vh,0) rotate(-18deg)}
-.sp-dot{width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:radial-gradient(circle,#ffe2a0aa,#ffe2a000 70%);opacity:.3;transform:translate3d(70vw,40vh,0)}
-.sp-core{width:70px;height:70px;margin:-35px 0 0 -35px;border-radius:50%;background:radial-gradient(circle,#fff6d6 0 35%,#ffd77acc 55%,#ffb14a00 72%);opacity:.9;transform:translate3d(96vw,30vh,0)}
-@media(max-width:600px){.sp-glow{width:440px;height:440px;margin:-220px 0 0 -220px}.sp-sun{width:170px;height:170px;margin:-85px 0 0 -85px}.sp-rays{width:360px;height:360px;margin:-180px 0 0 -180px}.sp-glare{width:300px;margin-left:-150px}.sp-core{width:76px;height:76px;margin:-38px 0 0 -38px}}
-
-/* trail-section links sit on a photo; a lighter pink keeps AA while the sun passes */
+.sun-page>*{position:absolute;left:0;top:0;border-radius:50%;will-change:transform,opacity}
+.sp-halo{width:420px;height:420px;margin:-210px 0 0 -210px;background:radial-gradient(circle,#ffd24dcc 0,#ffb02e77 22%,#ff8a1f33 42%,#ff7a1a00 68%)}
+.sp-rays{width:300px;height:300px;margin:-150px 0 0 -150px;
+ background:repeating-conic-gradient(from 0deg,#ffd75acc 0 5deg,#ffd75a00 5deg 30deg);
+ -webkit-mask:radial-gradient(circle,#0000 30%,#000 34%,#0000 70%);mask:radial-gradient(circle,#0000 30%,#000 34%,#0000 70%)}
+.sp-disc{width:150px;height:150px;margin:-75px 0 0 -75px;
+ background:radial-gradient(circle at 42% 40%,#fffdf0 0,#fff3a8 18%,#ffd23a 45%,#ffab1a 75%,#ff8c0f 100%);
+ box-shadow:0 0 18px 6px #ffd54a,0 0 50px 18px #ffa82a99,0 0 110px 40px #ff8a1f55}
+.sp-glare{width:520px;height:5px;margin:-2.5px 0 0 -260px;border-radius:3px;background:linear-gradient(90deg,#fff0,#ffe9a066 40%,#fffbe6cc 50%,#ffe9a066 60%,#fff0)}
+@media(max-width:600px){.sp-halo{width:300px;height:300px;margin:-150px 0 0 -150px}.sp-rays{width:210px;height:210px;margin:-105px 0 0 -105px}
+ .sp-disc{width:104px;height:104px;margin:-52px 0 0 -52px;box-shadow:0 0 14px 5px #ffd54a,0 0 36px 12px #ffa82a99,0 0 80px 28px #ff8a1f55}.sp-glare{width:320px;margin-left:-160px}}
 .s-trail .in a:not(.btn){color:#ffb8b8}
-
-/* v8: always-visible rim (unblended) so the sun never vanishes over light or busy sections */
-.sp-rim{width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;border:4px solid #c2410c;box-shadow:0 0 0 1px #ffb34755,inset 0 0 0 1px #ffb34755;opacity:.7;transform:translate3d(96vw,30vh,0)}
