@@ -34,7 +34,7 @@
     "links": {
       "website": "https://sandysflavorstation.com/",
       "instagram": "",
-      "facebook": "https://www.facebook.com/108470548693557",
+      "facebook": "",
       "spotify": ""
     },
     "source": [
@@ -52,8 +52,8 @@
     "menu": "Gourmet grilled cheese on sourdough and fresh-squeezed lemonade; gluten-free and kids options (per their site).",
     "cuisine": "Gourmet grilled cheese & lemonade",
     "links": {
-      "website": "https://easycheesytruck.com/",
-      "instagram": "",
+      "website": "",
+      "instagram": "https://www.instagram.com/easycheesytruck/",
       "facebook": "",
       "spotify": ""
     },
@@ -73,8 +73,8 @@
     "cuisine": "Burgers (truck); ice cream shop in Palm Harbor",
     "links": {
       "website": "",
-      "instagram": "",
-      "facebook": "",
+      "instagram": "https://www.instagram.com/dairyrichcreamery/",
+      "facebook": "https://www.facebook.com/DairyRich1959",
       "spotify": ""
     },
     "source": [
@@ -96,7 +96,7 @@
     "cuisine": "Philly cheesesteaks",
     "links": {
       "website": "",
-      "instagram": "",
+      "instagram": "https://www.instagram.com/stevedsauthenticcheesesteaks/",
       "facebook": "",
       "spotify": ""
     },
@@ -126,14 +126,15 @@
   {
     "name": "Bella Vita",
     "aliases": [
-      "Bella Vita Pizza"
+      "Bella Vita Pizza",
+      "Bella Vita Mobile Pizzeria"
     ],
     "photo": "",
     "menu": "",
     "cuisine": "Neapolitan-style pizza",
     "links": {
       "website": "",
-      "instagram": "",
+      "instagram": "https://www.instagram.com/enjoybellavita/",
       "facebook": "",
       "spotify": ""
     },
