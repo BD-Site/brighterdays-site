@@ -1,9 +1,9 @@
 /* Per-section one-time reveal effects. Triggered by .go (added once by IntersectionObserver). */
 .fx-hero .hbub{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;display:none}
 .rv-on .fx-hero .hbub{display:block}
-.hbub i{position:absolute;bottom:-20px;width:12px;height:12px;border-radius:50%;border:2px solid #fff;opacity:0}
+.hbub i{position:absolute;bottom:-24px;width:16px;height:16px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px #0007,inset 0 0 0 1px #0005;background:#ffffff1f;opacity:0}
 .fx-hero.go .hbub i{animation:hb 1.1s ease-out both}
-@keyframes hb{0%{transform:translate3d(0,0,0) scale(.6);opacity:0}25%{opacity:.75}100%{transform:translate3d(0,-320px,0) scale(1.1);opacity:0}}
+@keyframes hb{0%{transform:translate3d(0,0,0) scale(.6);opacity:0}25%{opacity:.95}100%{transform:translate3d(0,-320px,0) scale(1.1);opacity:0}}
 .fxrow{display:flex;align-items:flex-end;gap:1rem}
 .pint{flex:none;overflow:visible}.pint .beer{transform-box:fill-box;transform-origin:50% 100%}
 .fx-tap.go .pint .beer{animation:pour 1.1s cubic-bezier(.3,.7,.3,1) both}.fx-tap.go .pint .foam{animation:fade .35s .8s both}
