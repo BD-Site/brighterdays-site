@@ -54,6 +54,15 @@ The form on private-events.html posts to Formspree. Until the placeholder is rep
 - `.github/workflows/update-events.yml`: every 30 min plus workflow_dispatch. It commits `data/events.*` only if changed (`permissions: contents: write`). It runs only once the site is put in a GitHub repo.
 - `.nojekyll`, `README.md`, local git repo with an initial commit.
 
+## Untappd visibility (Aaron, Oct 13)
+- All customer-visible Untappd wording and links are removed from the pages: footer link, "pulled from Untappd" notes, noscript link, "View on Untappd". Data plumbing is unchanged.
+- The embed shows no visible Untappd logo or "powered by" text. In our CSS (assets/style.css) we hide its Menu/Events tab bar and make beer/brewery names non-clickable (they linked to untappd.com). We did NOT remove its screen-reader-only "Rated X on Untappd" text or the cap-rating icons.
+- Untappd for Business embed terms were not checked. If UfB requires attribution or links, remove those two CSS rules.
+
+## Home hero photo
+- `assets/img/home-hero.webp` (~247 KB) and `.jpg` fallback (~282 KB), 1440×810. Cropped from Aaron's Facebook photo `123_outdoor-palms.jpg`: taproom exterior, palms, Brighter Days banner, no faces. The source is only 1440px, so it wasn't upscaled to 1920.
+- Note: several facebook-photos filenames don't match their contents (e.g. 049 is a Steve D's promo graphic, 120 is a person posing at the 5K start).
+
 ## Other open items
 - Map embed is the keyless Google Maps iframe. Swap it for the Maps Embed API with a key if preferred.
 - Yelp/TripAdvisor/Google listing fixes and pointing Google's website field to brighterdaysbeer.com come after launch.
