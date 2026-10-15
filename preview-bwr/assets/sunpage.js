@@ -7,7 +7,7 @@ let vw=0,vh=0,max=1,hb=60,target=0,cur=0,raf=0,last=0;
 function measure(){vw=document.documentElement.clientWidth;vh=innerHeight;const h=document.querySelector('header');hb=h?h.getBoundingClientRect().height:60;
  max=Math.max(1,document.documentElement.scrollHeight-vh)}
 function place(p){const t=p*p*(3-2*p);
- const r=vw<=600?52:75,ed=r*.1,y0=vh*.28,y2=hb+r*.45,u=1-t;/* v11: upper band only */
+ const r=vw<=600?52:75,ed=r*.6,y0=vh*.28,y2=hb+r*.45,u=1-t;/* v11: upper band only */
  const x=ed+(vw-2*ed)*t*t*t,y=u*u*y0+2*u*t*(y2-10)+t*t*y2;
  const half=vw/2,inner=cl(0,1,1-(Math.abs(x-half)-(half-r*1.6))/(r*1.2));/* 1 when the disc is over the centre text column */
  const T=(a,b)=>`translate3d(${a.toFixed(1)}px,${b.toFixed(1)}px,0)`,s=.92+t*.12;
