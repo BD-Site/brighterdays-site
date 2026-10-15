@@ -1,0 +1,39 @@
+/* Home v3: continuous scrolling story (preview only). transform/opacity animation only. */
+main.v3{max-width:none;padding:0;margin:0}
+.s{position:relative;padding:4.5rem 1.25rem}
+.s>.in{position:relative;z-index:2;max-width:1100px;margin:0 auto}
+.s h2{font-size:clamp(1.8rem,4.5vw,2.8rem);margin:0 0 .8rem}
+.s .lead{font-size:1.15rem;max-width:640px}
+.edge{position:relative;z-index:2;display:block;width:100%;height:70px;margin:-1px 0;pointer-events:none}
+.edge svg{display:block;width:100%;height:100%}
+.split{display:grid;gap:2rem;align-items:center}
+@media(min-width:860px){.split{grid-template-columns:1fr 1fr}.split.rev>:first-child{order:2}}
+.bigph{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 18px 40px #0003}
+.bigph img{position:absolute;inset:-8% 0;width:100%;height:116%;max-width:none;object-fit:cover}
+.s-week{background:#111;color:#fff}.s-week a{color:#ff8a8a}.s-week h2{color:#fff;border-color:#C8102E}
+.s-week .card{background:#fff;color:#1a1a1a}.s-week .card a{color:#C8102E}.s-week .small{color:#555}
+.s-play{background:#fff}
+.s-trail{padding:0;color:#fff;min-height:620px;display:flex;align-items:center;overflow:hidden;background:#111}
+.s-trail .bg{position:absolute;inset:-10% 0;z-index:0}
+.s-trail .bg img{width:100%;height:100%;max-width:none;object-fit:cover}
+.s-trail .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#000c 0,#0008 55%,#0003 100%)}
+.s-trail>.in{padding:5rem 1.25rem;width:100%}
+.s-trail h2{color:#fff}.s-trail a{color:#ff8a8a}.s-trail .hours td{color:#fff;border-color:#ffffff33}
+.s-trail .map{width:100%;min-height:300px;border:0;border-radius:14px;box-shadow:0 12px 30px #0006}
+.s-book{background:#C8102E;color:#fff}.s-book h2{color:#fff;border-color:#fff}
+.s-book .btn{background:#fff;color:#111}.s-book .btn:hover{background:#111;color:#fff}
+.s-book .bigph{transform:rotate(2deg)}
+.s-story{background:#fff}.s-story blockquote{margin:0;font-size:1.2rem;line-height:1.6;border-left:4px solid #C8102E;padding-left:1rem}
+/* reveals (only when JS adds .rv-on) */
+.rv-on .rv{opacity:0;transform:translate3d(0,28px,0);transition:opacity .8s ease,transform .8s ease}
+.rv-on .rv.in{opacity:1;transform:none}
+/* drifting notes + bubbles layer: above section backgrounds, below text */
+.drift{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.drift>*{position:absolute;left:0;top:0;will-change:transform}
+.drift .b{border-radius:50%;border:2px solid currentColor}
+.drift svg{fill:currentColor}
+@media (prefers-reduced-motion:reduce){.drift{display:none}.rv-on .rv{opacity:1;transform:none;transition:none}.plx{transform:none!important}}
+.edge.ov{margin-top:-69px}
+.s-trail>.edge{position:absolute;left:0;right:0;z-index:1}.s-trail>.et{top:0}.s-trail>.eb{bottom:0}
+footer{position:relative;z-index:2}
+header{z-index:20}

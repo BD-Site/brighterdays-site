@@ -1,0 +1,40 @@
+/* Chalkboard gig poster (preview only). Fonts: Cabin Sketch (headings only), SIL OFL 1.1, see assets/fonts/CabinSketch-OFL.txt. */
+@font-face{font-family:"BD Chalk";src:url("fonts/CabinSketch-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+.chalk{position:relative;color:#f4f4f0;background:#161616;background-image:radial-gradient(ellipse at 20% 15%,#ffffff0d,transparent 55%),radial-gradient(ellipse at 80% 85%,#ffffff0a,transparent 50%),radial-gradient(#ffffff08 1px,transparent 1px);background-size:auto,auto,5px 5px;border:12px solid #2a2a2a;outline:2px solid #000;border-radius:6px;box-shadow:inset 0 0 60px #000c,0 14px 34px #0005;padding:1.6rem 1.4rem 1.4rem;overflow:hidden;}
+.chalk h2,.chalk .ch-title{font-family:"BD Chalk","Chalkboard SE","Segoe Print",system-ui,sans-serif;font-weight:700;color:#fff;letter-spacing:.04em;text-transform:uppercase;border:0;text-align:center;margin:0;line-height:1.05;text-shadow:0 0 1px #fff8}
+.chalk .ch-title{font-size:clamp(2.2rem,7vw,3.6rem)}
+.chalk .ch-sub{text-align:center;letter-spacing:.12em;text-transform:uppercase;font-size:1rem;margin:.3rem 0 1rem;color:#ddd}
+.chalk .ch-note{text-align:center;font-size:1.1rem;margin:0 0 1rem}
+.chalk a{color:#fff;text-decoration-color:#C8102E;text-decoration-thickness:2px;text-underline-offset:3px}
+.chalk a:hover,.chalk a:focus{color:#ffb3b3}
+.ch-wrap{display:grid;gap:1rem}
+@media(min-width:900px){.ch-wrap.with-gtr{grid-template-columns:1fr 180px}}
+.ch-gtr{display:none}
+@media(min-width:900px){.ch-gtr{display:block;width:100%;height:auto;opacity:.85}}
+.ch-list{list-style:none;margin:0;padding:0}
+.ch-row{display:grid;grid-template-columns:5.2rem auto 1fr;gap:.8rem;align-items:center;padding:.65rem 0;border-top:2px dashed #ffffff55}
+.ch-row:last-child{border-bottom:2px dashed #ffffff55}
+.ch-date{text-align:center;font-family:"BD Chalk","Chalkboard SE",system-ui,sans-serif;font-weight:700;line-height:1.05;font-size:1.05rem;border-right:2px solid #ffffff55;padding-right:.6rem}
+.ch-date b{display:block;font-size:1.25rem}
+.ch-ico{display:flex;gap:.3rem}
+.ch-ico svg{width:34px;height:34px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ch-what{font-size:1.2rem;line-height:1.25}
+.ch-what .t{display:block;text-transform:uppercase;letter-spacing:.03em}
+.ch-what .tm{display:block;font-size:1.05rem;color:#ddd}
+.ch-what a{text-decoration:none}.ch-what a:hover .t,.ch-what a:focus .t{text-decoration:underline;text-decoration-color:#C8102E}
+.ch-empty{text-align:center;font-size:1.2rem}
+.ch-foot{text-align:center;margin:1rem 0 0;font-size:1.1rem}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media(max-width:520px){.ch-row{grid-template-columns:4.2rem 1fr;}.ch-ico{grid-column:2;order:-1}.ch-what{grid-column:2}.ch-date{grid-row:span 2}.ch-ico svg{width:26px;height:26px}}
+.fx-week.go .ch-row{animation:poster .6s cubic-bezier(.2,.8,.3,1) both}
+.fx-week.go .ch-row:nth-child(2){animation-delay:.1s}.fx-week.go .ch-row:nth-child(3){animation-delay:.2s}.fx-week.go .ch-row:nth-child(n+4){animation-delay:.3s}
+.rv-on .fx-week:not(.go) .ch-row{opacity:0}
+.s-week.chalk-sec{background:#0d0d0d}
+@media (prefers-reduced-motion:reduce){.ch-row{animation:none!important;opacity:1!important}}
+.chalk .ch-title{display:block;text-align:center;border:0!important;width:100%}
+@media(min-width:900px){.ch-gtr{max-height:300px;align-self:center}}
+/* event titles: event link + outside food-truck links */
+.ch-what .t a{color:inherit}.ch-what .t a:hover{text-decoration:underline;text-decoration-color:#C8102E}
+a.trk{color:#ffb8b8!important;text-decoration:underline!important;text-decoration-color:#C8102E!important;text-underline-offset:3px}
+a.trk::after{content:" \2197";font-size:.75em}
+.truck a.trk{color:#fff!important;text-decoration-color:#fff!important}

@@ -1,0 +1,38 @@
+/* Can art, BD-original/guest badges, sound-wave divider (preview only) */
+.playlist li.has-can{padding-left:4.6rem;min-height:120px}
+.pl-can{position:absolute;left:.6rem;top:50%;transform:translateY(-50%) rotate(-4deg);width:3.4rem;z-index:1}
+.pl-can img{width:100%;height:auto;display:block;filter:drop-shadow(0 4px 6px #0008)}
+.badge{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:.08rem .45rem;border-radius:999px;margin:0 .4rem .2rem 0;vertical-align:middle}
+.b-bd{background:#C8102E;color:#fff}.b-guest{border:1.5px solid currentColor}
+#menu-container .menu-item{position:relative}
+#menu-container .bd-tag{display:inline-block;font:700 .7rem/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;letter-spacing:.04em;text-transform:uppercase;padding:.05rem .45rem;border-radius:999px;margin:0 0 .25rem}
+#menu-container .bd-tag.b-bd{background:#C8102E;color:#fff}
+#menu-container .bd-tag.b-guest{border:1.5px solid #111;color:#111}
+.swave{display:block;width:min(560px,90%);height:auto;margin:2rem auto 1.4rem;overflow:visible}
+.swave path{fill:none;stroke:#f2f2ee;stroke-width:1.3;stroke-linecap:round;opacity:.9}
+
+.tap-can{height:2.4em;width:auto;vertical-align:middle;margin-left:.45em;border-radius:3px}
+.s-cans .in{max-width:1100px;margin:0 auto}.cans-photos{display:grid;grid-template-columns:3fr 4fr;gap:1rem;margin-top:1rem}
+.cans-photos figure{margin:0}.cans-photos img{width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;aspect-ratio:auto}
+.cans-photos picture{display:block;height:100%}
+@media(max-width:700px){.cans-photos{grid-template-columns:1fr}.cans-photos img{height:auto}}
+.pl-feature{margin:0 auto 1.25rem;max-width:1100px}.pl-feature img{display:block;width:100%;aspect-ratio:16/7;object-fit:cover;object-position:50% 45%;border-radius:12px}@media(max-width:700px){.pl-feature img{aspect-ratio:4/3}}
+.pl-feats{display:grid;grid-template-columns:2fr 1fr;gap:1rem;max-width:1100px;margin:0 auto 1.25rem}.pl-feats .pl-feature{margin:0;max-width:none}.pl-feats .pl-feature img{aspect-ratio:auto;height:100%;max-height:420px}
+@media(max-width:700px){.pl-feats{grid-template-columns:1fr}.pl-feats .pl-feature img{max-height:none;aspect-ratio:4/3}}
+.cans-main{margin:1rem 0 0}.cans-main img{width:100%;height:auto;display:block;border-radius:12px}
+.cans-row{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin-top:.75rem}.cans-row figure{margin:0}.cans-row img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px;display:block}
+@media(max-width:700px){.cans-row{grid-template-columns:repeat(2,1fr)}}
+.trail-photo{margin:0 0 1rem}.trail-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 60%;border-radius:12px;display:block}
+.story-img2{display:block;margin-top:1rem}
+
+.s-reviews{background:#0d0d0d;color:#f2f2f2}.s-reviews .in{max-width:1100px;margin:0 auto}.rv-overall{margin:.25rem 0 1rem}
+.rv-reel{overflow:hidden;mask-image:linear-gradient(90deg,#0000,#000 6%,#000 94%,#0000)}
+.rv-track{display:flex;gap:1rem;width:max-content;animation:rvreel 60s linear infinite}.rv-dup{display:flex;gap:1rem}
+.rv-reel:hover .rv-track,.rv-reel:focus-within .rv-track{animation-play-state:paused}
+@keyframes rvreel{to{transform:translateX(calc(-50% - .5rem))}}
+.rv-card{margin:0;width:min(78vw,340px);flex:none;border:2px dashed #ffffff66;border-radius:14px;padding:1rem 1.1rem;background:#1a1a1a;transform:rotate(-1deg)}
+.rv-card:nth-child(even){transform:rotate(1deg)}
+.rv-card blockquote{margin:0 0 .6rem;font-size:1.02rem;line-height:1.45;color:#fff}.rv-card figcaption{font-size:.9rem;color:#ddd}.rv-card a{color:#f6c445}
+.rv-stars{color:#f6c445;white-space:nowrap}.rv-cta{margin-top:1.25rem;display:flex;gap:.6rem;flex-wrap:wrap}
+.s-reviews .btn-ghost{background:transparent;border:2px solid #fff;color:#fff}
+@media (prefers-reduced-motion:reduce){.rv-reel{mask-image:none}.rv-track{animation:none;width:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.rv-dup{display:none}.rv-card{width:auto;transform:none!important}}

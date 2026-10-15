@@ -1,0 +1,48 @@
+/* Site-wide chalkboard look (preview only). Headings: Cabin Sketch (SIL OFL 1.1, self-hosted). Body: system font. */
+:root{--board:#171717;--chalk:#f2f2ee;--chalk2:#cfcfc9;--red:#C8102E}
+body{color:var(--chalk);background-color:var(--board);background-image:radial-gradient(ellipse at 15% 10%,#ffffff0c,transparent 50%),radial-gradient(ellipse at 85% 60%,#ffffff09,transparent 55%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+h1,h2,h3,.ch-title{font-family:"BD Chalk","Chalkboard SE","Segoe Print",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif!important;font-weight:700;color:#fff!important;letter-spacing:.02em}
+h2{border-bottom-color:var(--red)!important}
+p,li,td,th,label,figcaption,.small,blockquote{color:inherit}
+.small,.ch-what .tm{color:var(--chalk2)!important}
+a{color:#fff;text-decoration-color:var(--red);text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover,a:focus{color:#ffb3b3}
+header{background:#0f0f0f!important;border-bottom:2px dashed #ffffff40!important}
+nav a{color:var(--chalk)!important}nav a:hover,nav a.on{color:#ff8a8a!important}
+#menuBtn{border-color:var(--chalk)!important;color:var(--chalk)!important;background:transparent}
+@media(max-width:820px){nav{background:#0f0f0f!important}}
+.btn{background:var(--red)!important;color:#fff!important;border:2px solid var(--red)}
+.btn:hover{background:#A50E25!important}
+.btn.alt{background:transparent!important;color:#fff!important;border:2px solid #fff}
+.card,.flag,.playlist li,.s-week .card{background:#ffffff0d!important;color:var(--chalk)!important;border:2px dashed #ffffff3a!important;box-shadow:none!important}
+.playlist li{border-left:4px solid var(--red)!important}
+.pill,.tag{background:transparent!important;color:#fff!important;border-color:#fff!important}
+.tag-truck{border-color:var(--red)!important}
+.pl-play{background:var(--red)!important;color:#fff!important}
+.hours td{border-color:#ffffff30!important;color:var(--chalk)}
+/* v3 sections: let the board show through */
+.s-tap,.s-play,.s-story,.s-week{background:transparent!important}
+.edge[style*="#fff"]{background:var(--board)!important}
+.edge path[fill="#fff"],.edge path[fill="#111"]{fill:var(--board)}
+.s-book{background:var(--red)!important}
+.pint path[stroke="#111"]{stroke:#f2f2ee}
+.vin circle[fill="#111"]{stroke:#f2f2ee;stroke-width:1.5}
+.pola{background:#f2f2ee}
+.mdiv svg [stroke="#111"]{stroke:#e8e8e2}
+.drift>*{color:#fff!important}
+footer{background:#0b0b0b!important;border-top:2px dashed #ffffff30}
+/* forms */
+input,select,textarea{background:#fff;color:#111;border:2px solid #fff}
+label{color:var(--chalk)}
+.ph-img{background:#ffffff10!important;color:var(--chalk)!important;border-color:#ffffff50!important}
+.gal-item{background:#ffffff10!important}
+/* chalk divider */
+.cdiv{display:flex;align-items:center;gap:.8rem;margin:2.2rem auto 1.2rem;max-width:520px}
+.cdiv::before,.cdiv::after{content:"";flex:1;border-top:2px dashed #ffffff55}
+.cdiv svg{width:34px;height:34px;fill:none;stroke:#f2f2ee;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.cdiv svg:nth-child(2n){stroke:#ff8a8a}
+#menu-container{background:#fff;color:#111;border-radius:10px;padding:.5rem}
+.day,.week .day,.sched .day{background:#ffffff0d!important;color:var(--chalk)!important;border:2px dashed #ffffff3a!important}
+.day h4{color:#ff8a8a!important}
+.req{color:#ff8a8a!important}
+.s-book .btn{background:#fff!important;color:#111!important;border-color:#fff}.s-book .btn:hover{background:#111!important;color:#fff!important}

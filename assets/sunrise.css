@@ -1,0 +1,10 @@
+/* Scroll-driven sunrise (preview only). Transform/opacity only; static fallback without JS or with reduced motion. */
+.sunrise{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.sunrise>*{position:absolute;will-change:transform,opacity}
+.sr-dawn{inset:0;background:linear-gradient(180deg,#5a0d18 0%,#b3261e 38%,#f07a2a 72%,#ffc46b 100%);opacity:.42}
+.sr-day{inset:0;background:linear-gradient(180deg,#ffffff00 0%,#fff3d000 50%,#ffe9a840 100%);opacity:.35}
+
+
+
+
+@media(max-width:600px){}
