@@ -30,7 +30,7 @@ ${ev.trucks.length?`<div class="row" style="margin-top:10px"><div class="ic">�
 <p class="note">Prototype with demo data. Events are real, from the website feed.</p>`},
 
 spin(){return `<h2 class="h2">Spin to Win</h2><div class="sub">Free spin every 3 days, or 100 pts a spin.</div>
-<div class="wheelwrap"><div class="pointer"></div><canvas id="wheel" width="660" height="660"></canvas><div class="hub">BD</div></div>
+<div class="wheelwrap"><canvas id="wheel" width="660" height="660"></canvas><div class="guitar" id="guitar"><svg viewBox="0 0 100 300" aria-hidden="true"><g fill="none" stroke="#f4f1ea" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M42 12 L50 2 L58 12 L58 44 L42 44 Z" fill="#e2312d"/><circle cx="38" cy="18" r="3"/><circle cx="38" cy="30" r="3"/><circle cx="62" cy="18" r="3"/><circle cx="62" cy="30" r="3"/><path d="M45 44 L45 168 M55 44 L55 168" /><path d="M45 44 H55 M45 70 H55 M45 92 H55 M45 112 H55 M45 130 H55 M45 146 H55"/><path d="M50 160 C30 156 16 168 20 186 C23 198 14 204 12 220 C8 250 30 268 50 268 C70 268 92 250 88 220 C86 204 77 198 80 186 C84 168 70 156 50 160 Z" fill="#161616"/><circle cx="50" cy="196" r="10" fill="#e2312d"/><path d="M38 232 H62" stroke-width="5"/><path d="M48 44 V232 M52 44 V232" stroke-width="1" opacity=".7"/></g></svg></div></div>
 <button class="btn red" id="free"></button><div style="height:10px"></div><button class="btn ghost" id="paid">Spin for 100 pts</button>
 <div class="odds">Odds per spin: big prize (hat or shirt) 5% · small prize (pint, sticker, 50 pts) 20% · try again 75%.<br>Demo only. Real launch needs a Florida sweepstakes rules check.</div>`},
 
@@ -63,24 +63,25 @@ V.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g)go(g.d
 
 // wheel: 8 slices
 const SL=[['🍺','Free pint','s'],['😅','Try again','x'],['✨','Sticker','s'],['😅','Try again','x'],['🧢','BD hat','b'],['😅','Try again','x'],['⭐','+50 pts','s'],['👕','BD shirt','b']];
-let rot=0,spinning=false;
+let rot=0,grot=0,spinning=false;
 function draw(){const c=$('#wheel');if(!c)return;const x=c.getContext('2d'),R=330,n=SL.length,a=2*Math.PI/n;x.clearRect(0,0,660,660);
 SL.forEach((s,i)=>{x.beginPath();x.moveTo(R,R);x.arc(R,R,R-6,i*a-Math.PI/2-a/2,(i+1)*a-Math.PI/2-a/2);x.closePath();x.fillStyle=s[2]=='b'?'#e2312d':s[2]=='s'?'#2b2b2b':'#161616';x.fill();x.strokeStyle='#f4f1ea';x.lineWidth=4;x.stroke();
 x.save();x.translate(R,R);x.rotate(i*a);x.textAlign='center';x.font='64px sans-serif';x.fillText(s[0],0,-R+100);x.fillStyle='#f4f1ea';x.font='bold 30px "BD Chalk",sans-serif';x.fillText(s[1],0,-R+150);x.restore();});
 x.beginPath();x.arc(R,R,R-4,0,7);x.lineWidth=8;x.strokeStyle='#f4f1ea';x.stroke();}
 function pick(){const r=Math.random();if(r<.03)return 4;if(r<.05)return 7;if(r<.12)return 2;if(r<.19)return 6;if(r<.25)return 0;return[1,3,5][Math.floor(Math.random()*3)];}
 function spin(paid){if(spinning)return;if(paid){if(pts<100)return alert('Not enough points (demo)');setPts(pts-100);}else{freeAt=Date.now()+3*864e5;SS('freeAt',freeAt);}
-spinning=true;updBtns();const i=pick(),a=360/SL.length;const jitter=(Math.random()-.5)*a*.6;rot+=360*6+((360-i*a-(rot%360))+360)%360+jitter;rot-=jitter; rot+=jitter;
-$('#wheel').style.transform=`rotate(${rot}deg)`;
+spinning=true;updBtns();const i=pick(),a=360/SL.length;const jitter=(Math.random()-.5)*a*.6;
+rot+=360*5+Math.random()*360;const T=(((i*a+jitter+rot)%360)+360)%360;grot-=360*3+((((grot-T)%360)+360)%360);
+const w=$('#wheel'),g=$('#guitar');w.style.transform=`rotate(${rot}deg)`;g.style.transform=`rotate(${grot}deg)`;w.dataset.win=i;w.dataset.rot=rot;g.dataset.rot=grot;
 setTimeout(()=>{spinning=false;updBtns();const s=SL[i];if(s[2]=='x'){modal(`<div class="prize">😅</div><h2>So close!</h2><p class="sub">No prize this time. Grab a pint and try again.</p><button class="btn" data-close>OK</button>`);return;}
 if(i==6)setPts(pts+50);const code='BD-'+Math.random().toString(36).slice(2,7).toUpperCase();if(i!=6){won.unshift({i:s[0],n:s[1],c:code});SS('won',won);}
-modal(`<div class="prize">${s[0]}</div><h2>You won ${s[2]=='b'?'big! ':''}${s[1]}!</h2>${i==6?'<p class="sub">50 bonus points added to your balance.</p>':`<div class="ticket">${code}</div><p class="sub"><b style="color:var(--chalk)">Show this at the counter</b> to claim. Saved in Rewards.</p>`}<button class="btn red" data-close>Cheers!</button>`);fizz(s[0]);},4700);}
+modal(`<div class="prize">${s[0]}</div><h2>You won ${s[2]=='b'?'big! ':''}${s[1]}!</h2>${i==6?'<p class="sub">50 bonus points added to your balance.</p>':`<div class="ticket">${code}</div><p class="sub"><b style="color:var(--chalk)">Show this at the counter</b> to claim. Saved in Rewards.</p>`}<button class="btn red" data-close>Cheers!</button>`);fizz(s[0]);},5300);}
 let tick;
 function updBtns(){const f=$('#free'),p=$('#paid');if(!f)return;const left=freeAt-Date.now();
 if(left<=0){f.disabled=spinning;f.textContent='🎁 Free spin ready!';}else{f.disabled=true;const d=Math.floor(left/864e5),h=Math.floor(left%864e5/36e5),m=Math.floor(left%36e5/6e4),s=Math.floor(left%6e4/1e3);f.textContent=`Next free spin in ${d}d ${h}h ${m}m ${String(s).padStart(2,'0')}s`;}
 p.disabled=spinning||pts<100;}
 const after={
-spin(){draw();$('#wheel').style.transition='none';$('#wheel').style.transform=`rotate(${rot}deg)`;requestAnimationFrame(()=>$('#wheel').style.transition='');document.fonts.ready.then(draw);$('#free').onclick=()=>spin(false);$('#paid').onclick=()=>spin(true);updBtns();clearInterval(tick);tick=setInterval(()=>cur=='spin'?updBtns():clearInterval(tick),1000);},
+spin(){draw();$('#wheel').style.transition='none';$('#wheel').style.transition='none';$('#guitar').style.transition='none';$('#wheel').style.transform=`rotate(${rot}deg)`;$('#guitar').style.transform=`rotate(${grot}deg)`;requestAnimationFrame(()=>{$('#wheel').style.transition='';$('#guitar').style.transition='';});document.fonts.ready.then(draw);$('#free').onclick=()=>spin(false);$('#paid').onclick=()=>spin(true);updBtns();clearInterval(tick);tick=setInterval(()=>cur=='spin'?updBtns():clearInterval(tick),1000);},
 async taps(){let beers=[];try{beers=await (await fetch('../data/beer-songs.json')).json();}catch(e){}
 const cans={'Bicycle Race':'bicycle-race','Raspberry Beret':'raspberry-beret','Double Trouble':'double-trouble','Summertime Magic':'summertime-magic','Bright Lights':'bright-lights','Endless Love':'endless-love','Marula':'marula','Sabrosa':'sabrosa','Universal Love':'universal-love'};
 const pickN=['Brighter Days IPA','Bright Lights','Bicycle Race','Chickity Czech','Endless Love','Raspberry Beret','Summertime Magic','Sabrosa','Marula','Double Trouble','Oktoberfest','Tin Roof Rusted','Midnight Marauders'];
