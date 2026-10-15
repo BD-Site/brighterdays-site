@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Brighter Days App · Demo</title>
+<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="../assets/img/logo/apple-touch-icon.png">
+<link rel="stylesheet" href="app.css"></head><body>
+<div class="demo-ribbon">DEMO · prototype · fake data</div>
+<header class="top"><img src="../assets/img/logo/bd-logo-main-white.svg" alt="Brighter Days" class="logo"><div class="pts-chip" id="chip">3,740 pts</div></header>
+<main id="view"></main>
+<nav class="tabs" id="tabs">
+<button data-t="home" class="on"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9h-6v-6H9v6H3z"/></svg>Home</button>
+<button data-t="spin"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>Spin</button>
+<button data-t="taps"><svg viewBox="0 0 24 24"><path d="M6 4h10v3h2a2 2 0 012 2v5a2 2 0 01-2 2h-2v4H6z M16 9v5h2V9z"/></svg>Taps</button>
+<button data-t="events"><svg viewBox="0 0 24 24"><path d="M9 18V6l11-2v12"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>Events</button>
+<button data-t="rewards"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.5 7L12 17.6 5.7 21l1.5-7L2 9.3l7-.8z"/></svg>Rewards</button>
+<button data-t="me"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Me</button>
+</nav>
+<div class="modal" id="modal" hidden><div class="card" id="mcard"></div></div>
+<div id="fizz" aria-hidden="true"></div>
+<script src="../data/events.js"></script><script src="app.js"></script></body></html>
