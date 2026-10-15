@@ -19,7 +19,7 @@ const tm=s=>new Date(s).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-dig
 const screens={
 home(){const ev=upcoming[0];const isToday=ev&&ev.start.slice(0,10)==localYmd;const h=today.getHours();
 const nextR=[750,1500,2500,3500].find(r=>r>pts)||3500;
-return `<h1 class="hello">${h<12?'Morning':h<17?'Afternoon':'Evening'}, Alex 🍻</h1><div class="sub">Demo guest · Brighter Days Taphouse, Dunedin</div>
+return `<h1 class="hello">${h<12?'Morning':h<17?'Afternoon':'Evening'}, Alex 🍻</h1><div class="sub">Demo guest · Brighter Days Brewing · Tarpon Springs</div>
 <div class="box"><div class="sub">Your points</div><div class="big"><span data-pts>${fmt(pts)}</span></div><span class="worth" data-worth>worth ${worth(pts)}</span>
 <div class="bar"><b style="width:${Math.min(100,pts/nextR*100)}%"></b></div><div class="sub">${pts>=nextR?'Reward ready!':fmt(nextR-pts)+' pts to your next reward'} · earn 10 pts per $1</div>${wave(34)}</div>
 <div class="box promo"><div class="x2">2×</div><h2>Double Points Saturday</h2><div>Every dollar earns 20 pts all day this Saturday. Bring a friend 🍺</div></div>
