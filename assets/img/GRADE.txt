@@ -1,1 +1,2 @@
 All site photos share one grade (warm +2.5% R, -3.5% B, contrast 1.05, saturation 1.07), EXIF stripped. Graded 2026-10-16. Do not re-grade already graded files.
+GRADE: /tmp/bd/grade.py (R x1.025+2, B x.965, contrast 1.05, color 1.07) also applied to assets/img/bm/* and art-chickity-czech (2026-10-16)
