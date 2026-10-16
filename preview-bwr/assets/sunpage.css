@@ -1,5 +1,5 @@
 /* Page-wide sun v9: one solid glowing sun. Fixed, click-through overlay. Transform/opacity only. */
-.sun-page{position:fixed;inset:0;pointer-events:none;z-index:19;overflow:hidden}
+.sun-page{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}/* v12: under section content (.in z2) so text always paints above the sun */
 .sun-page>*{position:absolute;left:0;top:0;border-radius:50%;will-change:transform,opacity}
 .sp-halo{width:420px;height:420px;margin:-210px 0 0 -210px;background:radial-gradient(circle,#ffd24dcc 0,#ffb02e77 22%,#ff8a1f33 42%,#ff7a1a00 68%)}
 .sp-rays{width:300px;height:300px;margin:-150px 0 0 -150px;

@@ -35,3 +35,6 @@
 .alb .bd-tag{margin:.35rem 0 0}.alb .bd-tag.b-guest{border-color:#fff;color:#fff}
 #menu-container.alb-on{position:absolute!important;left:-10000px;width:1px;height:1px;overflow:hidden}
 .pl-tbd{opacity:1}.pl-tbd .pl-song{color:inherit}
+/* AA: soft local backing (in the section's own color) behind body copy in the sun's band; text paints above the sun (sun v12 z1) */
+.s-tap .lead,.bx .lead{background:#141414bf;box-shadow:0 0 0 .4rem #141414bf;border-radius:.4rem}
+.s-book .in>p,.s-book .in p:not(:has(.btn)){background:#c8102ed9;box-shadow:0 0 0 .4rem #c8102ed9;border-radius:.4rem}
