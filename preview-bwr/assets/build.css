@@ -69,3 +69,4 @@
 .hero-fade img.hs.dim{filter:brightness(.68)}
 .bx-strip-full{position:relative;z-index:2}
 .s-trail p a{background:#141414bf;box-shadow:0 0 0 .2rem #141414bf;border-radius:2px}
+@media (max-width:760px){.home-taps .alb-grid{grid-auto-columns:min(62%,170px)}}
