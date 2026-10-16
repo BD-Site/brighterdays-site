@@ -13,3 +13,9 @@ function build(){const items=[...m.querySelectorAll('.menu-item')];if(!items.len
  m.classList.add('alb-on')}
 new MutationObserver(()=>{clearTimeout(t);t=setTimeout(build,300)}).observe(m,{childList:true,subtree:true});build()})();
 
+/* Beer Playlist placeholders for songs not yet confirmed (no links, clearly marked). */
+(()=>{const el=document.getElementById('pl');if(!el)return;
+const TBD=['Endless Love','Marula','Summertime Magic','Double Trouble'];
+function add(){const ol=el.querySelector('ol.playlist');if(!ol||ol.querySelector('.pl-tbd'))return;
+ ol.insertAdjacentHTML('beforeend',TBD.map(b=>`<li class="pl-tbd"><div class="pl-beer"><strong>${b}</strong> <span class="pill gold">Song coming soon</span></div><div class="pl-song">🎵 Song to be announced</div></li>`).join(''))}
+new MutationObserver(add).observe(el,{childList:true,subtree:true});add()})();
