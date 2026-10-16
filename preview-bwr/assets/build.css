@@ -32,7 +32,7 @@
 .alb .trk-n{font:700 .72rem/1 system-ui,sans-serif;letter-spacing:.08em;color:var(--gold);margin:.6rem 0 .2rem;text-transform:uppercase}
 .alb h3{font-size:1.02rem;line-height:1.25;margin:0 0 .25rem;color:#fff}
 .alb .trk{font:.82rem/1.35 system-ui,sans-serif;color:#e6e6e6;margin:0}
-.alb .bd-tag{margin:.35rem 0 0}.alb .bd-tag.b-guest{border-color:#fff;color:#fff}
+.alb .bd-tag{display:inline-block;margin:.4rem 0 0;padding:.15rem .55rem}.alb .bd-tag.b-guest{border-color:#fff;color:#fff}
 #menu-container.alb-on{position:absolute!important;left:-10000px;width:1px;height:1px;overflow:hidden}
 .pl-tbd{opacity:1}.pl-tbd .pl-song{color:inherit}
 /* AA: soft local backing (in the section's own color) behind body copy in the sun's band; text paints above the sun (sun v12 z1) */
