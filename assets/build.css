@@ -69,3 +69,12 @@
 .hero-fade img.hs.dim{filter:brightness(.68)}
 .bx-strip-full{position:relative;z-index:2}
 .s-trail p a{background:#141414bf;box-shadow:0 0 0 .2rem #141414bf;border-radius:2px}
+/* 2026-10-16 no-blur: trail background is a full-res portrait photo; on phones cap its height so it is never shown above native resolution */
+.s-trail .bg img{object-position:center 45%}
+@media (max-width:760px){.s-trail .bg{inset:0 0 auto 0;height:min(120%,1340px);-webkit-mask-image:linear-gradient(#000 82%,transparent);mask-image:linear-gradient(#000 82%,transparent)}}
+@media (max-width:760px){.home-taps .alb-grid{grid-auto-columns:min(62%,170px)}}
+/* no-blur caps: never display these past their native resolution on 2x screens */
+img[src*="cans-wall"]{max-width:800px;margin-left:auto;margin-right:auto}
+img[src*="brewhouse-band"]{max-height:476px!important}
+.story-img2 img{height:auto!important}
+.story-img2 img{aspect-ratio:4/3!important;max-height:476px!important;min-height:0!important}

@@ -26,7 +26,7 @@ function build(){const items=[...m.querySelectorAll('.menu-item')];if(!items.len
   else{cov=`<img class="logo" src="assets/img/logo/bd-logo-main-black.svg?v=live4" alt="" loading="lazy" decoding="async">`;kind='logo'}
   if(kind!=='logo')real++;
   return `<li class="alb" data-art="${kind}"><div class="cov">${cov}</div><p class="trk-n">Track ${String(i+1).padStart(2,'0')}</p><h3>${esc(nm)}</h3><p class="trk">${esc(st)}${abv?'<br>'+esc(abv):''}</p>${bd?'<span class="bd-tag b-bd">BD original</span>':(br?`<p class="trk">${esc(br)}</p>`:'')}</li>`}).join('');
- grid.querySelectorAll('img.fit,img.sm').forEach(im=>{const cap=()=>{if(im.naturalWidth){im.style.maxWidth='min(100%,'+im.naturalWidth/2+'px)';im.style.maxHeight='min(100%,'+im.naturalHeight/2+'px)'}};im.complete?cap():im.addEventListener('load',cap,{once:true})});/* never shown below 2 image px per CSS px, so small labels stay crisp instead of being blown up */
+ grid.querySelectorAll('img.fit,img.sm').forEach(im=>{const cap=()=>{if(im.naturalWidth){const d=Math.max(1,devicePixelRatio||1);im.style.maxWidth='min(100%,'+im.naturalWidth/d+'px)';im.style.maxHeight='min(100%,'+im.naturalHeight/d+'px)'}};im.complete?cap():im.addEventListener('load',cap,{once:true})});/* never shown above native resolution at the device pixel ratio, so small labels stay crisp instead of being blown up */
  grid.dataset.realArt=real+'/'+items.length;m.classList.add('alb-on')}
 new MutationObserver(()=>{clearTimeout(t);t=setTimeout(build,300)}).observe(m,{childList:true,subtree:true});build()})();
 

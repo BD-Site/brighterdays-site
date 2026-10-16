@@ -36,3 +36,5 @@
 .rv-stars{color:#f6c445;white-space:nowrap}.rv-cta{margin-top:1.25rem;display:flex;gap:.6rem;flex-wrap:wrap}
 .s-reviews .btn-ghost{background:transparent;border:2px solid #fff;color:#fff}
 @media (prefers-reduced-motion:reduce){.rv-reel{mask-image:none}.rv-track{animation:none;width:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.rv-dup{display:none}.rv-card{width:auto;transform:none!important}}
+/* no-blur: keep the brewhouse photo at or below native resolution on 2x screens */
+.story-img2 img{height:auto!important;aspect-ratio:4/3!important;max-height:476px!important}
