@@ -48,3 +48,9 @@
 @media (max-width:760px){.home-taps .alb-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:62%;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 0 .75rem;-webkit-overflow-scrolling:touch}.home-taps .alb{scroll-snap-align:start}.home-taps .alb:nth-child(n+7){display:block}}
 .bx>.in>h2{display:inline-block;background:#141414bf;box-shadow:0 0 0 .4rem #141414bf;border-radius:2px}
 .s-trail .lead,.s-play .pl-beer .small{background:#141414bf;box-shadow:0 0 0 .3rem #141414bf}
+
+/* 2026-10-16 sharp covers: labels and logo shown whole on white with padding, never upscaled past native */
+.alb .cov:has(img.fit),.alb .cov:has(img.sm),.alb .cov:has(img.logo){background:#fff}
+.alb .cov img.fit,.alb .cov img.logo{object-fit:contain;padding:9%}
+.alb .cov img.sm,.alb .cov img.fit{width:auto;height:auto;max-width:100%;max-height:100%;margin:auto;box-sizing:border-box}
+.alb .cov img.logo{padding:14%}
