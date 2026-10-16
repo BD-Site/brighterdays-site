@@ -38,3 +38,13 @@
 /* AA: soft local backing (in the section's own color) behind body copy in the sun's band; text paints above the sun (sun v12 z1) */
 .s-tap .lead,.bx .lead{background:#141414bf;box-shadow:0 0 0 .4rem #141414bf;border-radius:.4rem}
 .s-book .in>p,.s-book .in p:not(:has(.btn)){background:#c8102ed9;box-shadow:0 0 0 .4rem #c8102ed9;border-radius:.4rem}
+
+/* 2026-10-16 fixes: hidden placeholders/reviews (markup kept), home tap row */
+.bx-ph[hidden],#reviews[hidden]{display:none!important}
+.hero-flag img.hero-img{object-position:center 40%}
+.home-taps{margin-top:1rem}
+.home-taps .alb-grid{grid-template-columns:repeat(6,minmax(0,1fr));margin:.5rem 0 0}
+.home-taps .alb:nth-child(n+7){display:none}
+@media (max-width:760px){.home-taps .alb-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:62%;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 0 .75rem;-webkit-overflow-scrolling:touch}.home-taps .alb{scroll-snap-align:start}.home-taps .alb:nth-child(n+7){display:block}}
+.bx>.in>h2{display:inline-block;background:#141414bf;box-shadow:0 0 0 .4rem #141414bf;border-radius:2px}
+.s-trail .lead,.s-play .pl-beer .small{background:#141414bf;box-shadow:0 0 0 .3rem #141414bf}
