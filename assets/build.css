@@ -1,0 +1,40 @@
+/* Preview build 2026-10-16: sunrise-gold accent, album tap cards, photo strips, placeholders */
+:root{--gold:#F2B33D;--gold-d:#E3A21F}
+.btn.gold{background:var(--gold)!important;color:#111!important}
+.btn.gold:hover{background:#FFC857!important}
+.bd-tag.b-bd{background:var(--gold)!important;color:#111!important}
+.pill.gold{background:var(--gold)!important;color:#111!important;border-color:var(--gold)!important}
+.bx{background:#151515;color:#f2f2f2}
+.bx.light{background:#fff;color:#111}
+.bx h2{margin-top:0}.bx .lead{max-width:46rem}
+.bx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem;margin:1.2rem 0}
+.bx-card{background:#1f1f1f;border-radius:14px;overflow:hidden;color:#fff;margin:0}
+.bx.light .bx-card{background:#f4f4f4;color:#111}
+.bx-card picture,.bx-strip picture{display:block}
+.bx-card img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.bx-card.wide img{aspect-ratio:4/3}
+.bx-card .bx-b{padding:.8rem 1rem 1rem}.bx-card h3{margin:.1rem 0 .3rem;font-size:1.1rem}.bx-card p{margin:0;font-size:.95rem}
+.bx-strip{display:flex;gap:.8rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.2rem 0 .8rem;margin:1rem 0;-webkit-overflow-scrolling:touch}
+.bx-strip figure{flex:0 0 min(68%,250px);scroll-snap-align:start;margin:0;background:#1f1f1f;border-radius:12px;overflow:hidden}
+.bx-strip img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.bx-strip figcaption{padding:.5rem .75rem;font-size:.92rem;color:#f2f2f2}
+.bx-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3rem;aspect-ratio:4/3;max-width:360px;border:2px dashed var(--gold);border-radius:14px;background:#1b1b1b;color:#fff;text-align:center;padding:1rem;margin:.6rem 0 1rem}
+.bx-ph strong{color:var(--gold)}
+.pe-com{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1rem 0 1.5rem}
+.pe-com figure{margin:0}.pe-com img{display:block;width:100%;height:auto;border-radius:14px;aspect-ratio:4/3;object-fit:cover}
+.pe-com figcaption{font-size:.92rem;margin-top:.35rem}
+/* album-style tap cards built from the menu embed's own data */
+.alb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin:1rem 0 1.5rem;padding:0;list-style:none}
+.alb{background:#141414;color:#fff;border-radius:12px;padding:.65rem .65rem .8rem;margin:0}
+.alb .cov{position:relative;aspect-ratio:1;border-radius:6px;overflow:hidden;background:radial-gradient(circle at 50% 50%,#2a2a2a 0 14%,#0c0c0c 15% 33%,#1a1a1a 34% 35%,#0c0c0c 36% 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px #0007}
+.alb .cov img{width:100%;height:100%;object-fit:cover}
+.alb .cov img.can{object-fit:contain;padding:6%}
+.alb .trk-n{font:700 .72rem/1 system-ui,sans-serif;letter-spacing:.08em;color:var(--gold);margin:.6rem 0 .2rem;text-transform:uppercase}
+.alb h3{font-size:1.02rem;line-height:1.25;margin:0 0 .25rem;color:#fff}
+.alb .trk{font:.82rem/1.35 system-ui,sans-serif;color:#e6e6e6;margin:0}
+.alb .bd-tag{display:inline-block;margin:.4rem 0 0;padding:.15rem .55rem}.alb .bd-tag.b-guest{border-color:#fff;color:#fff}
+#menu-container.alb-on{position:absolute!important;left:-10000px;width:1px;height:1px;overflow:hidden}
+.pl-tbd{opacity:1}.pl-tbd .pl-song{color:inherit}
+/* AA: soft local backing (in the section's own color) behind body copy in the sun's band; text paints above the sun (sun v12 z1) */
+.s-tap .lead,.bx .lead{background:#141414bf;box-shadow:0 0 0 .4rem #141414bf;border-radius:.4rem}
+.s-book .in>p,.s-book .in p:not(:has(.btn)){background:#c8102ed9;box-shadow:0 0 0 .4rem #c8102ed9;border-radius:.4rem}

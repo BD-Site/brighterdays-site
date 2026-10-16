@@ -29,3 +29,11 @@ h3{letter-spacing:-0.01em}
 
 /* Mobile hero: let the hero grow with its text and keep breathing room above the heading. */
 @media(max-width:600px){.hero.photo{height:auto;min-height:68vh;min-height:68svh}.hero.photo .hero-inner{padding-top:4.5rem}}
+
+/* hero v2 (photo-forward): light tint over the photo, darker gradient only behind the text */
+.hero.photo .sunrise{opacity:.4}
+.hero.photo .hero-inner{background:none}
+.hero.photo .hero-inner::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 62% 58% at 50% 52%,#000000c4 0,#000000a0 45%,#0000 82%)}
+.hero.photo .hero-inner{isolation:isolate}
+@media(max-width:600px){.hero.photo .hero-inner::before{background:radial-gradient(ellipse 95% 62% at 50% 50%,#000000c8 0,#000000a8 50%,#0000 92%)}}
+.hero.photo img.hero-img{object-position:center 18%}
