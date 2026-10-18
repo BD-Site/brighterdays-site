@@ -5,7 +5,7 @@ This is a preview only. No DNS, domain, or deploy changes were made. Static file
 - **Hours** (Mon–Thu 12–9, Fri 12–10, Sat 11–10, Sun 11–7): CONFIRMED by Aaron on Oct 13, 2026. All "to be confirmed" badges are removed.
 - **Food truck schedule:** shows only trucks found in Untappd event titles. Food hours change, so there is no hard-coded BD truck schedule or menu. The page links to Instagram for updates and has a friendly empty state.
 - **Email:** aaron@brighterdaysbeer.com (Aaron's address for now) is used in the private-event form mailto, on the Contact page and in the footer.
-- **Story page:** uses copy approved by Aaron (Oct 13, 2026), verbatim. The bio/charity placeholder is removed. The owner/brewhouse photo is still a placeholder. "Live music Thursdays and First Fridays" was added to Home and Events next to the trivia note, based on the approved copy.
+- **Story page:** uses copy approved by Aaron (Oct 13, 2026), verbatim. The bio/charity placeholder is removed. The owner/brewhouse photo is still a placeholder. "Live music Thursdays and First Fridays" was added to Home and Events, based on the approved copy.
 - Spaces descriptions (picnic tables, TVs, Adirondack chairs, umbrellas) come from review descriptions. Please verify them.
 
 ## Placeholders
@@ -18,7 +18,7 @@ This is a preview only. No DNS, domain, or deploy changes were made. Static file
 - **Events and food trucks:** BD's plan has no events embed, so `scripts/update_untappd.py` still scrapes the PUBLIC events page https://untappd.com/v/brighter-days-brewing-company/10061420/events into `data/events.json|.js`. Run it on a schedule (cron/GitHub Action every 15–30 min) and redeploy. Staff keep adding events in UfB as usual.
 - Events: Untappd shows **upcoming events only**. The script merges each run into the existing events.json, so history builds up over time. Event descriptions on Untappd are blank.
 - Food trucks: detected from event titles. A title part (split on "&") counts as a truck if it has a food emoji, a food keyword, or a name/alias in `data/foodtrucks.json`. Untappd names only about one truck a week and doesn't list BD's own truck, so those days won't appear on the page. **Ask staff to always put the truck name in the Untappd event title.**
-- Limits (events scraper only): scraping is unofficial and breaks if Untappd changes its markup. On a failed parse the script exits and keeps the old snapshot. It may also go against Untappd's terms, so use the official embed or API if BD has access. The year is inferred, since Untappd dates have no year. Friday trivia comes from Big Trophy Trivia and isn't on Untappd, so it's static text.
+- Limits (events scraper only): scraping is unofficial and breaks if Untappd changes its markup. On a failed parse the script exits and keeps the old snapshot. It may also go against Untappd's terms, so use the official embed or API if BD has access. The year is inferred, since Untappd dates have no year.
 
 ## Logo
 - Official logo pack is in `assets/img/logo/`. The main hexagon logo comes from the vector PDF as SVG, black and white, with a cropped viewBox and transparent background, plus 600-dpi transparent PNGs. The starburst mark is made from the 2000px PNG in black and white, since there's no vector version. Favicons are 16/32/48 (.ico), 192, 512 and a 180 apple-touch icon.
