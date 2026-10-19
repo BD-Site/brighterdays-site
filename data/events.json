@@ -1,6 +1,6 @@
 {
   "source": "https://untappd.com/v/brighter-days-brewing-company/10061420/events",
-  "fetched": "2026-10-19T16:21+00:00",
+  "fetched": "2026-10-19T22:16+00:00",
   "events": [
     {
       "start": "2026-10-14T18:00",
@@ -72,11 +72,11 @@
     {
       "start": "2026-10-23T18:00",
       "trucks": [
-        "Dairy Rich"
+        "Sandy’s Flavor Station"
       ],
       "musician": true,
       "id": "1008305",
-      "title": "🎵 Greg West & 🍔 Dairy Rich",
+      "title": "🎵 Greg West & 🍔 Sandy’s Flavor Station",
       "when": "Fri, Oct 23rd • 6:00 PM EDT - Fri, Oct 23rd • 8:00 PM EDT",
       "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1008305"
     },
