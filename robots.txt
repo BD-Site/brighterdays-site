@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /preview-bwr/
+Disallow: /app-demo/
+
+Sitemap: https://brighterdaysbeer.com/sitemap.xml
