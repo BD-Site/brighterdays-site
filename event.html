@@ -9,7 +9,7 @@
 (async()=>{const el=document.getElementById('ev-detail');const id=new URLSearchParams(location.search).get('id');const e=(window.BD_EVENTS?.events||[]).find(x=>x.id===id);
  if(!e){el.innerHTML='<h2>Event not found</h2><p>It may have passed. <a href="events.html">See upcoming events</a>.</p>';return}
  document.title=e.title.replace(/[^\p{L}\p{N}\s'&-]/gu,'').trim()+' | Brighter Days Brewing Company';
- const [perf,trucks]=await Promise.all([loadJSON('data/performers.js?v=live6'),loadJSON('data/foodtrucks.js?v=live6')]);
+ const [perf,trucks]=await Promise.all([loadJSON('data/performers.json?v=seo1'),loadJSON('data/foodtrucks.json?v=seo1')]);
  const cards=[],plain=[];titleParts(e.title).forEach(p=>{const t=findEntry(p,trucks);if(t&&(t.menu||t.cuisine||Object.values(t.links||{}).some(Boolean))){cards.push(entryCard(t,'truck'));return}const m=findEntry(p,perf);const has=x=>x&&(x.bio||x.genre||Object.values(x.links||{}).some(Boolean));if(has(m)){cards.push(entryCard(m,'perf'));return}plain.push(p)});
  el.innerHTML=`<h2>${esc(e.title)}</h2><p><strong>${esc(e.when.replace(/ - .*• /,' – '))}</strong><br>Brighter Days Brewing Co., 311 N Safford Ave, Tarpon Springs</p>${cards.length?'<div class="grid">'+cards.join('')+'</div>':''}${plain.length?`<p>${plain.map(esc).join(' · ')}</p>`:''}<p class="small">Lineups can change, so check <a href="https://instagram.com/brighterdaysbrewco">@brighterdaysbrewco</a>.</p>`})();
 </script><script src="assets/music.js?v=live6"></script><!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "19ab397ab5264671b2aecec83bec787e"}'></script><!-- End Cloudflare Web Analytics -->
