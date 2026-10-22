@@ -17,7 +17,10 @@ function chTypes(e){const t=String(e.title).toLowerCase(),out=[];
  if(!out.length)out.push('beer');return out}
 function chTitle(s){return String(s).replace(/[\u{1F300}-\u{1FAFF}\u2600-\u27BF\uFE0F]/gu,'').replace(/\s+&\s+/g,' + ').replace(/\s+/g,' ').trim()}
 function chTime(w){const m=String(w).match(/•\s*(\d{1,2}):(\d\d)\s*(AM|PM).*?•\s*(\d{1,2}):(\d\d)\s*(AM|PM)/);if(!m)return'';const f=(h,mi)=>h+(mi!=='00'?':'+mi:'');return m[3]===m[6]?`${f(m[1],m[2])}–${f(m[4],m[5])} ${m[6]}`:`${f(m[1],m[2])} ${m[3]}–${f(m[4],m[5])} ${m[6]}`}
-function renderChalk(el,limit){if(!BD_TRUCKS.length)trucksReady.then(()=>BD_TRUCKS.length&&renderChalk(el,limit));let ev=upcoming();if(limit)ev=ev.slice(0,limit);
+/* The page may already hold the same list pre-rendered by scripts/render_events.py (between EVENTS markers).
+ In that case wait for food-truck links to load before re-rendering, so the list never flickers. */
+function renderChalk(el,limit){if(!BD_TRUCKS.length&&!el._chWait&&el.querySelector('.ch-list,.ch-empty')){el._chWait=1;trucksReady.then(()=>renderChalk(el,limit));return}
+ if(!BD_TRUCKS.length&&!el._chWait)trucksReady.then(()=>BD_TRUCKS.length&&renderChalk(el,limit));let ev=upcoming();if(limit)ev=ev.slice(0,limit);
  if(!ev.length){el.innerHTML='<p class="ch-empty">No upcoming events posted yet. Check back soon or follow <a href="https://instagram.com/brighterdaysbrewco">@brighterdaysbrewco</a>.</p>';return}
  el.innerHTML='<ul class="ch-list">'+ev.map(e=>{const d=new Date(e.start),dow=d.toLocaleDateString('en-US',{weekday:'short'}).toUpperCase(),md=d.toLocaleDateString('en-US',{month:'short',day:'numeric'}).toUpperCase(),ty=chTypes(e);
  return `<li class="ch-row"><div class="ch-date">${dow}<b>${md}</b></div><div class="ch-ico" aria-hidden="true">${ty.map(k=>CH_ICONS[k]).join('')}</div><div class="ch-what"><span class="sr">${ty.map(k=>CH_LABEL[k]).join(', ')}: </span><span class="t">${linkTitle(chTitle(e.title),t=>`<a href="event.html?id=${esc(e.id)}">${esc(t)}</a>`)}</span><a class="tm" href="event.html?id=${esc(e.id)}">${esc(chTime(e.when))}</a></div></li>`}).join('')+'</ul>'}

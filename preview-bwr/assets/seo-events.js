@@ -17,6 +17,8 @@
   var place={'@type':'Place','name':'Brighter Days Brewing Company','address':{'@type':'PostalAddress','streetAddress':'311 N Safford Ave','addressLocality':'Tarpon Springs','addressRegion':'FL','postalCode':'34689','addressCountry':'US'}};
   var org={'@type':'Organization','@id':SITE+'#brewery','name':'Brighter Days Brewing Company','url':SITE};
   var only=document.documentElement.getAttribute('data-ld-event')==='id'?new URLSearchParams(location.search).get('id'):null;
+  /* Pages with a static Event JSON-LD block (written by scripts/render_events.py) need nothing injected. */
+  if(!only&&document.querySelector('script#bd-events-ld[data-static]')) return;
   var now=Date.now(),out=[];
   D.events.forEach(function(e){
     if(!e||!e.id||!e.start) return; if(only&&e.id!==only) return;
