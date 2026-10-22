@@ -37,10 +37,18 @@ path = os.path.join(ROOT, "events.json")
 old = json.load(open(path)) if os.path.exists(path) else {"events": []}
 byid = {e["id"]: e for e in old.get("events", [])}
 e = BeautifulSoup(get(VENUE + "/events"), "html.parser")
+parsed = {}
 for it in e.select(".event-item"):
-    a = it.select_one("h4.name a"); m = re.search(r"/event/(\d+)", a["href"])
+    a = it.select_one("h4.name a"); m = re.search(r"/event/(\d+)", a["href"]) if a and a.get("href") else None
+    if not m: continue
     when = txt(it.select_one("p.date")); title = txt(a)
-    byid[m.group(1)] = {"start": parse_start(when), "trucks": find_trucks(title), "musician": not not re.search("[\U0001F3B5\U0001F3BC\U0001F3B6\U0001F3B8\U0001F3A4]", title), "id": m.group(1), "title": title, "when": when, "url": "https://untappd.com" + a["href"]}
+    parsed[m.group(1)] = {"start": parse_start(when), "trucks": find_trucks(title), "musician": not not re.search("[\U0001F3B5\U0001F3BC\U0001F3B6\U0001F3B8\U0001F3A4]", title), "id": m.group(1), "title": title, "when": when, "url": "https://untappd.com" + a["href"]}
+print(f"Parsed {len(parsed)} upcoming events from Untappd")
+if not parsed:
+    # Untappd changed its markup, blocked us, or returned an empty page. Fail the run (non-zero exit fails the
+    # GitHub Action) and leave data/ and the HTML pages exactly as they are.
+    print("ERROR: parsed 0 events from the Untappd venue page; refusing to overwrite data/events.*", file=sys.stderr); sys.exit(1)
+byid.update(parsed)
 evs = sorted(byid.values(), key=lambda x: x.get("start") or x["when"])
 if evs == old.get("events") and os.path.exists(path):
     print(f"No change: {len(evs)} events (snapshot and timestamp left as-is)"); sys.exit(0)

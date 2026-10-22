@@ -12,6 +12,10 @@ concurrency:
   group: update-events
   cancel-in-progress: false
 
+env:
+  # Pages that carry <!-- EVENTS:START/END --> and <!-- EVENTS-LD:START/END --> marker blocks.
+  EVENT_PAGES: index.html events.html preview-bwr/index.html preview-bwr/events.html
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -21,16 +25,21 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install beautifulsoup4
+      # Fails the run (exit 1) and writes nothing if Untappd returns 0 events; later steps are skipped.
       - name: Fetch events from public Untappd venue page
         run: python3 scripts/update_untappd.py
-      - name: Commit data/events.* if changed
+      # Rewrites only the text between the marker comments; exits non-zero (writing nothing) if a page lacks markers.
+      - name: Render upcoming events as static HTML + Event JSON-LD
+        run: python3 scripts/render_events.py $EVENT_PAGES
+      - name: Commit if the data or the rendered events changed
         run: |
-          if git diff --quiet -- data/events.json data/events.js; then
+          if git diff --quiet -- data/events.json data/events.js $EVENT_PAGES; then
             echo "No changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/events.json data/events.js
+          git add data/events.json data/events.js $EVENT_PAGES
           git commit -m "Update Untappd events snapshot"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
           git push
