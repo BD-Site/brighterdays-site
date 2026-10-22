@@ -25,6 +25,10 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install beautifulsoup4
+      # Live from the stage: no-op while data/live.json has an empty channelId. Never fails the run.
+      - name: Check whether the YouTube channel is live
+        continue-on-error: true
+        run: python3 scripts/check_youtube_live.py data/live.json
       # Fails the run (exit 1) and writes nothing if Untappd returns 0 events; later steps are skipped.
       - name: Fetch events from public Untappd venue page
         run: python3 scripts/update_untappd.py
@@ -33,13 +37,13 @@ jobs:
         run: python3 scripts/render_events.py $EVENT_PAGES
       - name: Commit if the data or the rendered events changed
         run: |
-          if git diff --quiet -- data/events.json data/events.js $EVENT_PAGES; then
+          if git diff --quiet -- data/events.json data/events.js data/live.json $EVENT_PAGES; then
             echo "No changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/events.json data/events.js $EVENT_PAGES
-          git commit -m "Update Untappd events snapshot"
+          git add data/events.json data/events.js data/live.json $EVENT_PAGES
+          git commit -m "Update Untappd events snapshot / live status"
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push
