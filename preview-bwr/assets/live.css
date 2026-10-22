@@ -1,0 +1,26 @@
+/* Live from the stage: click-to-load YouTube facade. No third-party requests until the visitor clicks Play. */
+.bd-live{max-width:860px;margin:2.4rem auto 1rem;padding:0 1rem}
+.bd-live h2{margin:0 0 .3rem;text-align:center}
+.bd-live .live-sub{margin:0 auto .9rem;text-align:center;color:var(--chalk2,#cfcfc9);max-width:36rem}
+.live-box{position:relative;width:100%;aspect-ratio:16/9;border:2px dashed #ffffff3a;border-radius:14px;overflow:hidden;background:#0d0d0d radial-gradient(ellipse at 50% 30%,#C8102E33,transparent 65%)}
+@supports not (aspect-ratio:16/9){.live-box{height:0;padding-top:56.25%}}
+.live-box>*{position:absolute;inset:0}
+.live-off,.live-play{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;text-align:center;padding:1rem}
+.live-off svg,.live-play .live-art{width:clamp(56px,12vw,96px);height:auto;fill:none;stroke:#f2f2ee;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.live-off p{margin:0;font-size:clamp(1rem,2.4vw,1.2rem);color:#f2f2ee}
+.live-off a{font-weight:700;white-space:nowrap}
+.live-play{width:100%;height:100%;border:0;margin:0;cursor:pointer;color:#fff;font:inherit;background:transparent}
+.live-play .live-btn{display:inline-flex;align-items:center;gap:.55rem;background:#C8102E;color:#fff;border-radius:999px;padding:.75rem 1.4rem;font-weight:800;font-size:1.1rem;letter-spacing:.02em;box-shadow:0 6px 24px #0008}
+.live-play .live-btn svg{width:1.2em;height:1.2em;fill:#fff}
+.live-play:hover .live-btn{background:#A50E25}
+.live-play:focus{outline:none}
+.live-play:focus-visible .live-btn{outline:3px solid #fff;outline-offset:4px}
+.live-badge{display:inline-flex;align-items:center;gap:.4rem;font-weight:800;font-size:.85rem;letter-spacing:.12em;color:#fff;background:#111;border:2px solid #C8102E;border-radius:6px;padding:.15rem .5rem}
+.live-badge::before,.live-dot{content:"";display:inline-block;width:.6em;height:.6em;border-radius:50%;background:#C8102E}
+.live-note{position:static!important;margin:.5rem 0 0;text-align:center;font-size:.85rem;color:var(--chalk2,#cfcfc9)}
+.live-box iframe{width:100%;height:100%;border:0;display:block;background:#000}
+/* home-page link near This Week */
+.live-link .live-dot{width:.55em;height:.55em;margin-right:.35em;vertical-align:.08em;background:#ffffff80}
+.live-link.on .live-dot{background:#ff2a45;animation:livepulse 1.6s ease-in-out infinite}
+@keyframes livepulse{50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.live-link.on .live-dot{animation:none}}
