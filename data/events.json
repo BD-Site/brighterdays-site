@@ -1,6 +1,6 @@
 {
   "source": "https://untappd.com/v/brighter-days-brewing-company/10061420/events",
-  "fetched": "2026-10-22T21:21+00:00",
+  "fetched": "2026-10-28T17:13+00:00",
   "events": [
     {
       "start": "2026-10-14T18:00",
@@ -97,6 +97,26 @@
       "title": "🎤 BD Open Mic",
       "when": "Wed, Oct 28th • 6:00 PM EDT - Wed, Oct 28th • 9:00 PM EDT",
       "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1008307"
+    },
+    {
+      "start": "2026-10-29T18:00",
+      "trucks": [
+        "Easy Cheesy Lemon Squeezy"
+      ],
+      "musician": true,
+      "id": "1009614",
+      "title": "🎵 Greg West & 🧀 Easy Cheesy Lemon Squeezy",
+      "when": "Thu, Oct 29th • 6:00 PM EDT - Thu, Oct 29th • 8:00 PM EDT",
+      "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1009614"
+    },
+    {
+      "start": "2026-10-30T18:30",
+      "trucks": [],
+      "musician": true,
+      "id": "1009616",
+      "title": "🎶 Adam Christel",
+      "when": "Fri, Oct 30th • 6:30 PM EDT - Fri, Oct 30th • 8:30 PM EDT",
+      "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1009616"
     }
   ]
 }
