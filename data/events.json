@@ -1,6 +1,6 @@
 {
   "source": "https://untappd.com/v/brighter-days-brewing-company/10061420/events",
-  "fetched": "2026-10-28T17:13+00:00",
+  "fetched": "2026-10-29T17:16+00:00",
   "events": [
     {
       "start": "2026-10-14T18:00",
@@ -117,6 +117,15 @@
       "title": "🎶 Adam Christel",
       "when": "Fri, Oct 30th • 6:30 PM EDT - Fri, Oct 30th • 8:30 PM EDT",
       "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1009616"
+    },
+    {
+      "start": "2026-11-01T11:00",
+      "trucks": [],
+      "musician": false,
+      "id": "1009899",
+      "title": "🧘 Yoga & Beer",
+      "when": "Sun, Nov 1st • 11:00 AM EDT - Sun, Nov 1st • 12:00 PM EDT",
+      "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1009899"
     }
   ]
 }
