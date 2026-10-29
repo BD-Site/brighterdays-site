@@ -1,6 +1,6 @@
 {
   "source": "https://untappd.com/v/brighter-days-brewing-company/10061420/events",
-  "fetched": "2026-10-29T17:16+00:00",
+  "fetched": "2026-10-29T21:08+00:00",
   "events": [
     {
       "start": "2026-10-14T18:00",
@@ -100,12 +100,10 @@
     },
     {
       "start": "2026-10-29T18:00",
-      "trucks": [
-        "Easy Cheesy Lemon Squeezy"
-      ],
+      "trucks": [],
       "musician": true,
       "id": "1009614",
-      "title": "🎵 Greg West & 🧀 Easy Cheesy Lemon Squeezy",
+      "title": "🎵 Greg West",
       "when": "Thu, Oct 29th • 6:00 PM EDT - Thu, Oct 29th • 8:00 PM EDT",
       "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1009614"
     },
