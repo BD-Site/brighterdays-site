@@ -25,7 +25,8 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install beautifulsoup4
-      # Fails the run (exit 1) and writes nothing if Untappd returns 0 events; later steps are skipped.
+      # Writes nothing when 0 events are parsed. Exits 0 (a normal no-change run) when Untappd
+      # shows its empty-state message; exits 1 if the fetch failed or that message is absent.
       - name: Fetch events from public Untappd venue page
         run: python3 scripts/update_untappd.py
       # Rewrites only the text between the marker comments; exits non-zero (writing nothing) if a page lacks markers.
