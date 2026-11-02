@@ -1,6 +1,6 @@
 {
   "source": "https://untappd.com/v/brighter-days-brewing-company/10061420/events",
-  "fetched": "2026-11-01T06:31+00:00",
+  "fetched": "2026-11-02T17:44+00:00",
   "events": [
     {
       "start": "2026-10-14T18:00",
@@ -124,6 +124,66 @@
       "title": "🧘 Yoga & Beer",
       "when": "Sun, Nov 1st • 11:00 AM EST - Sun, Nov 1st • 12:00 PM EST",
       "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1009899"
+    },
+    {
+      "start": "2026-11-05T18:00",
+      "trucks": [],
+      "musician": true,
+      "id": "1010467",
+      "title": "🎶 Carl August",
+      "when": "Thu, Nov 5th • 6:00 PM EST - Thu, Nov 5th • 8:00 PM EST",
+      "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1010467"
+    },
+    {
+      "start": "2026-11-06T18:00",
+      "trucks": [
+        "Bella Vita"
+      ],
+      "musician": true,
+      "id": "1010468",
+      "title": "🎵 Dan Lavoie & 🍕 Bella Vita",
+      "when": "Fri, Nov 6th • 6:00 PM EST - Fri, Nov 6th • 9:00 PM EST",
+      "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1010468"
+    },
+    {
+      "start": "2026-11-10T18:00",
+      "trucks": [
+        "Beer Share"
+      ],
+      "musician": false,
+      "id": "1010469",
+      "title": "🍻 Beer Share",
+      "when": "Tue, Nov 10th • 6:00 PM EST - Tue, Nov 10th • 8:00 PM EST",
+      "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1010469"
+    },
+    {
+      "start": "2026-11-11T18:00",
+      "trucks": [],
+      "musician": true,
+      "id": "1010471",
+      "title": "🎤 BD Open Mic",
+      "when": "Wed, Nov 11th • 6:00 PM EST - Wed, Nov 11th • 9:00 PM EST",
+      "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1010471"
+    },
+    {
+      "start": "2026-11-12T18:00",
+      "trucks": [
+        "Dairy Rich"
+      ],
+      "musician": true,
+      "id": "1010472",
+      "title": "🎶 Greg West & 🍔 Dairy Rich",
+      "when": "Thu, Nov 12th • 6:00 PM EST - Thu, Nov 12th • 8:00 PM EST",
+      "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1010472"
+    },
+    {
+      "start": "2026-11-15T11:00",
+      "trucks": [],
+      "musician": false,
+      "id": "1010470",
+      "title": "📕 Guilded Page Used Book Sale",
+      "when": "Sun, Nov 15th • 11:00 AM EST - Sun, Nov 15th • 4:00 PM EST",
+      "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1010470"
     }
   ]
 }
