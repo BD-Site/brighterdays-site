@@ -1,6 +1,6 @@
 {
   "source": "https://untappd.com/v/brighter-days-brewing-company/10061420/events",
-  "fetched": "2026-11-02T17:44+00:00",
+  "fetched": "2026-11-06T23:03+00:00",
   "events": [
     {
       "start": "2026-10-14T18:00",
@@ -139,9 +139,9 @@
       "trucks": [
         "Bella Vita"
       ],
-      "musician": true,
+      "musician": false,
       "id": "1010468",
-      "title": "🎵 Dan Lavoie & 🍕 Bella Vita",
+      "title": "🍕 Bella Vita",
       "when": "Fri, Nov 6th • 6:00 PM EST - Fri, Nov 6th • 9:00 PM EST",
       "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1010468"
     },
