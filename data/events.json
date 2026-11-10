@@ -1,6 +1,6 @@
 {
   "source": "https://untappd.com/v/brighter-days-brewing-company/10061420/events",
-  "fetched": "2026-11-06T23:03+00:00",
+  "fetched": "2026-11-10T18:30+00:00",
   "events": [
     {
       "start": "2026-10-14T18:00",
@@ -175,6 +175,15 @@
       "title": "🎶 Greg West & 🍔 Dairy Rich",
       "when": "Thu, Nov 12th • 6:00 PM EST - Thu, Nov 12th • 8:00 PM EST",
       "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1010472"
+    },
+    {
+      "start": "2026-11-13T18:00",
+      "trucks": [],
+      "musician": true,
+      "id": "1011885",
+      "title": "🎶 Adam Christel",
+      "when": "Fri, Nov 13th • 6:00 PM EST - Fri, Nov 13th • 8:00 PM EST",
+      "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1011885"
     },
     {
       "start": "2026-11-15T11:00",
