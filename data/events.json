@@ -1,6 +1,6 @@
 {
   "source": "https://untappd.com/v/brighter-days-brewing-company/10061420/events",
-  "fetched": "2026-11-19T00:34+00:00",
+  "fetched": "2026-11-25T23:24+00:00",
   "events": [
     {
       "start": "2026-10-14T18:00",
@@ -233,6 +233,24 @@
       "title": "🏈 Go Bucs!",
       "when": "Sun, Nov 22nd • 1:00 PM EST - Sun, Nov 22nd • 4:00 PM EST",
       "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1013375"
+    },
+    {
+      "start": "2026-11-25T18:00",
+      "trucks": [],
+      "musician": true,
+      "id": "1014561",
+      "title": "🎵 Greg West & 🦀 Midway by the Sea",
+      "when": "Wed, Nov 25th • 6:00 PM EST - Wed, Nov 25th • 8:00 PM EST",
+      "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1014561"
+    },
+    {
+      "start": "2026-11-26T11:00",
+      "trucks": [],
+      "musician": false,
+      "id": "1014562",
+      "title": "🦃 Thanksgiving Potluck",
+      "when": "Thu, Nov 26th • 11:00 AM EST - Thu, Nov 26th • 4:00 PM EST",
+      "url": "https://untappd.com/v/brighter-days-brewing-company/10061420/event/1014562"
     }
   ]
 }
